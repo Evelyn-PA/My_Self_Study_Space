@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Aarospace;
+    src: url("Fonts/Aerospace.ttf");
+}
+
+#main-logo {
+    width: 150px;
+    margin: 10px auto;
+}
+
+body {
+    color: white;
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmdxZ3NyeGk4N2p1bTNmcjJtODFoaHZmNmI2Z2VnMXl3NXlxYWhmbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6G8lRMOrYC6rFS/giphy.gif");
+    background-size: cover;
+    text-align: center;
+    font-family: Aarospace;
+}
+
+.btn {
+    padding: 6px 12px;
+    background-color: #f8f8f8;
+    border: none;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+#underline {
+    border-bottom: 4px solid #f8f8f8;
+}
