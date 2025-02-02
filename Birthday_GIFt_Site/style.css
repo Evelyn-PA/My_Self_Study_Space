@@ -1,7 +1,7 @@
 body {
     font-family: "Pacifico", serif;
     text-align: center;
-    background-color: #bde0fe;
+    background: linear-gradient(#d1fdff, #ace0f9);
     color: #5C0029;
 }
 
@@ -17,16 +17,48 @@ h4 {
     text-shadow: -2px 2px 1px red;
 }
 
-#bday-age {
-    background-color: #F8F8F8;
-}
-
-#bday-date {
-    background-color: #F8F8F8;
-}
-
 #header {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+#giftbox-close {
+    width: 400px;
+}
+
+.gift-img-1 {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background-image: url("Images/Giftbox-close.png");
+}
+
+.gift-img-1:hover {
+    margin: -10px;
+    width: 600px;
+    height: 500px;
+    background-image: url("Images/Giftbox-open.png");
+    background-size: cover;
+}
+
+.gift-img-2 {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background-image: url("Images/Giftbox-close.png");
+}
+
+.gift-img-2:hover {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-image: url("Images/hbd-gif.gif");
+    background-size: cover;
+}
+
+footer {
+    position: relative;
+    margin-top: 50px;
+    padding: 20px;
 }
