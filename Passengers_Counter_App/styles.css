@@ -1,0 +1,38 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+    background-image: url("Images/trainstation_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+#increase-btn {
+    background-color: #30a9a6;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#increase-btn:hover {
+    background-color: #517c8b;
+}

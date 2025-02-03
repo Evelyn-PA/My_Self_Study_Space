@@ -28,14 +28,15 @@ h4 {
 }
 
 .gift-img-1 {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     width: 500px;
     height: 500px;
     background-image: url("Images/Giftbox-close.png");
 }
 
 .gift-img-1:hover {
-    margin: -10px;
+    margin: auto;
     width: 600px;
     height: 500px;
     background-image: url("Images/Giftbox-open.png");
@@ -43,7 +44,7 @@ h4 {
 }
 
 .gift-img-2 {
-    margin: 0 auto;
+    margin: auto;
     width: 500px;
     height: 500px;
     background-image: url("Images/Giftbox-close.png");
