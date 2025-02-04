@@ -6,7 +6,16 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 50vh;
+}
+
+.container {
+    background-color: rgba(48, 169, 166, 0.8);
+    padding: 20px;
+    margin: 4rem auto;
+    max-width: 500px;
+    border-radius: 15px;
+    border: 3px solid #fafafa;
 }
 
 h1 {
@@ -20,8 +29,17 @@ h2 {
     margin-top: 0;
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
 #increase-btn {
-    background-color: #30a9a6;
+    background-color: #30a96a;
     color: white;
     padding: 10px 20px;
     font-family: 'Courier New', Courier, monospace;
@@ -31,8 +49,52 @@ h2 {
     border-radius: 15px;
     cursor: pointer;
     margin-right: 10px;
+    width: 200px;
 }
 
 #increase-btn:hover {
     background-color: #517c8b;
+}
+
+#save-btn {
+    background-color: #a93069;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+#save-btn:hover {
+    background-color: #517c8b;
+}
+
+#reset-btn {
+    background-color: #a93033;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+#reset-btn:hover {
+    background-color: #517c8b;
+}
+
+#save-El {
+    font-weight: bold;
+    font-size: 18px;
 }
