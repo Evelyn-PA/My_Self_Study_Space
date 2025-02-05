@@ -1,7 +1,7 @@
 // document.getElementById("count").innerText = 5
 
-countEl = document.getElementById("count")
-saveEl = document.getElementById("save-El")
+let countEl = document.getElementById("count")
+let saveEl = document.getElementById("save-El")
 
 let count = 0
 
@@ -22,3 +22,4 @@ function reset() {
     countEl.textContent = count
     saveEl.textContent = "Previous entries: "
 }
+
