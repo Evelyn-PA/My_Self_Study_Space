@@ -1,0 +1,42 @@
+body {
+    background-image: url('Images/blackjack_bg.jpg');
+    background-size: cover;
+    font-family: "Ultra", serif;
+    text-align: center;
+}
+
+#header {
+    color: goldenrod;
+    font-size: 3em;
+    text-shadow: 5px 5px black;
+    margin-top: 70px;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+#el-messages {
+    font-style: italic;
+}
+
+#start {
+    margin-top: 2em;
+    background-color: goldenrod;
+    font-family: "Ultra", serif;
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 1.75em;
+    color: #016f32;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+#start:hover {
+    background-color: #016f32;
+    color: goldenrod;
+}
