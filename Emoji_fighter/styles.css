@@ -1,3 +1,44 @@
 h1 {
     font-family: "Permanent Marker", serif;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Permanent Marker", serif;
+    height: 100vh;
+    color: #e98a1d;
+}
+
+h1 {
+    transform: rotate(-5deg);
+    font-size: 3em;
+    text-shadow: -5px 5px 1px black;
+}
+
+#display-stg {
+    width: 400px;
+    max-width: 500px;
+    margin: 1.5em auto 20px auto;
+    padding: 20px;
+    font-size: 5em;
+    border: 6px solid black;
+    border-radius: 15px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.5em;
+    background-color: #e98a1d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 80px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #f7b733;
+}
