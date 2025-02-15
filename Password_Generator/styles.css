@@ -1,9 +1,11 @@
 /* Add first background */
 body {
-    width: 100%;
+    width: 90%;
+    max-width: 600px;
     background-color: #1E1E1E;
     display: flex;
     align-items: center;
+    margin: auto;
     flex-direction: column;
     height: 75vh;
     font-family: "Josefin Sans", sans-serif;
@@ -12,6 +14,7 @@ body {
 /* Add second background */
 .container {
     width: auto;
+    max-width: 900px;
     background-color: #2B2D31;
     padding: 20px;
     border-radius: 10px;
@@ -65,7 +68,7 @@ body {
 
 /* Edit the button */
 .radio-container {
-    display: inline-block;
+    display: inline-flex;
     font-size: 16px;
     margin: 0 15px;
     margin-bottom: 10px;
@@ -87,7 +90,8 @@ body {
 
 /* Adjust the password display */
 .display {
-    width: 500px;
+    width: 90%;
+    max-width: 400px;
     height: 50px;
     font-size: 20px;
     text-align: center;
@@ -97,4 +101,10 @@ body {
     border: none;
     border-width: 2px;
     padding: 20px;
+}
+
+/*Add hover for the submit button*/
+#generate-password:hover {
+    background-color: #25AE8D;
+    cursor: pointer;
 }
