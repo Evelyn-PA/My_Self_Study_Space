@@ -8,7 +8,7 @@
     <title>Password Generator</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -23,8 +23,8 @@
 
         <div class="body">
             <div class="ps">
-                <p>Password length</p>
-                <input type="number" id="password-length" min="8" max="50" value="8">
+                <p>Password length (8 - 50 Character) </p>
+                <input type="number" id="password-length" min="8" max="50" value="">
             </div>
 
             <div class="choose-chr">
@@ -32,35 +32,35 @@
                 <div class="radio-container">
                     <!-- button all -->
                     <label class="radio-container">
-                        <input type="radio" name="option" checked>
+                        <input type="radio" name="option" checked id="all">
                         <span class="radio-circle"></span>
                         <span class="radio-text">All</span>
                     </label>
 
                     <!-- button numbers -->
                     <label class="radio-container">
-                        <input type="radio" name="option">
+                        <input type="radio" name="option" id="numbers">
                         <span class="radio-circle"></span>
                         <span class="radio-text">Numbers</span>
                     </label>
 
                     <!-- Button Symbols-->
                     <label class="radio-container">
-                        <input type="radio" name="option">
+                        <input type="radio" name="option" id="symbols">
                         <span class="radio-circle"></span>
                         <span class="radio-text">Symbols</span>
                     </label>
 
                     <!-- Button Uppercase -->
                     <label class="radio-container">
-                        <input type="radio" name="option">
+                        <input type="radio" name="option" id="uppercase">
                         <span class="radio-circle"></span>
                         <span class="radio-text">Uppercase</span>
                     </label>
 
                     <!-- Button Lowercase -->
                     <label class="radio-container">
-                        <input type="radio" name="option">
+                        <input type="radio" name="option" id="lowercase">
                         <span class="radio-circle"></span>
                         <span class="radio-text">Lowercase</span>
                     </label>
@@ -68,7 +68,7 @@
             </div>
 
             <div>
-                <button id="generate-password">Generate Password</button>
+                <button id="generate-password" onclick="generatePassword()">Generate Password</button>
             </div>
 
         </div>
@@ -77,6 +77,13 @@
     <!-- This will be outside of secondframe-->
     <div class="display"></div>
 
+    <!-- Add copy icon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <button id="copy" onclick="copy()"><ion-icon name="copy-outline"></ion-icon></button>
+
+    <!-- Add this inside your HTML, for example, below the copy button -->
+    <div id="message"></div>
 </body>
 
 </html>
