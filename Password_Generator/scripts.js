@@ -55,6 +55,7 @@ function copy() {
     let messageEl = document.querySelector("#message");
 
     // Check if there's a password to copy
+    // use the clipboard API to copy the password to the clipboard
     navigator.clipboard
         .writeText(copyEl)
         .then(() => {
