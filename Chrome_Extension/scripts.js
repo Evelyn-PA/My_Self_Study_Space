@@ -1,17 +1,27 @@
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
+let myLeads = [];
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#ul-el");
 let saveEl = document.querySelector("#save-el");
 
+//When the button click, the input value is saved to the myLeads array
+//Then the renderLeads function is called to render the list items to the unordered list
 saveEl.addEventListener("click", function () {
-    console.log("Button clicked with addEventListener");
     myLeads.push(inputEl.value);
-    console.log(myLeads);
-})
+    //Clear the input field when the button is clicked
+    inputEl.value = "";
+    renderLeads();
+});
 
-//Log out the items in myLeads array
-for (let i = 0; i < myLeads.length; i++) {
-    console.log(myLeads[i]);
-    //render out the myLeads array
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>" + " ";
+function renderLeads() {
+    //Create a variable to store the list items
+    let listItems = " ";
+    //Loop through the myLeads array
+    for (let i = 0; i < myLeads.length; i++) {
+        //Add each item to the listItems variable with a li HTML tag
+        listItems += "<li>" + myLeads[i] + "</li>";
+    }
+    //Render the list items to the unordered list
+    ulEl.innerHTML = listItems;
 }
+
+
