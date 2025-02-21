@@ -18,7 +18,14 @@ function renderLeads() {
     //Loop through the myLeads array
     for (let i = 0; i < myLeads.length; i++) {
         //Add each item to the listItems variable with a li HTML tag
-        listItems += "<li>" + myLeads[i] + "</li>";
+        // listItems += "<li> <a target= '_blank' href ='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>";
+        listItems += `
+        <li> 
+            <a target= "_blank" href = "${myLeads[i]}">
+            ${myLeads[i]}
+            </a>
+        </li>`;
+        console.log(listItems);
     }
     //Render the list items to the unordered list
     ulEl.innerHTML = listItems;
