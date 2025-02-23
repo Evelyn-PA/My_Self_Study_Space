@@ -9,6 +9,15 @@ saveEl.addEventListener("click", function () {
     myLeads.push(inputEl.value);
     //Clear the input field when the button is clicked
     inputEl.value = "";
+
+    //save the myLeads array to the local storage as a string
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    console.log(localStorage.getItem("myLeads"));
+
+    //get the myLeads array from the local storage
+    let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+
     renderLeads();
 });
 
