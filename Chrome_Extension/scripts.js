@@ -33,11 +33,11 @@ saveEl.addEventListener("click", function () {
 //Add the url (tab) while click the save tab button
 tabEl.addEventListener("click", function () {
     //Using chrome API to take the current tab url
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs)){
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         myLeads.push(tabs[0].url);
         localStorage.setItem("myLeads", JSON.stringify(myLeads));
         render(myLeads);
-    }
+    })
 })
 
 
