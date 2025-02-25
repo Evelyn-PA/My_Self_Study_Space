@@ -34,9 +34,9 @@ saveEl.addEventListener("click", function () {
 tabEl.addEventListener("click", function () {
     //Using chrome API to take the current tab url
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        myLeads.push(tabs[0].url);
-        localStorage.setItem("myLeads", JSON.stringify(myLeads));
-        render(myLeads);
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
     })
 })
 
