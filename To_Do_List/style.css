@@ -1,0 +1,22 @@
+body {
+    font-family: "Jua", serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F8ED;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.sec-container {
+    background-color: #FBFBFB;
+    width: 50%;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 10px;
+}
