@@ -70,7 +70,7 @@ body {
 }
 
 #list li {
-    padding: 14px 15px;
+    padding: 14px 3.2rem;
     margin-bottom: 2rem;
     background-color: #FFFFFF;
     border-radius: 10px;
@@ -79,10 +79,23 @@ body {
 }
 
 ul li {
+    background-image: url("Images/circle.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 15px 15px;
+    cursor: pointer;
+    padding-left: 40px;
     list-style: none;
     font-size: 21px;
 }
 
+#checked {
+    background-image: url("Images/circle-checked.svg");
+    background-size: 20px;
+    text-decoration: line-through;
+    color: black;
+
+}
 
 .bottom {
     text-align: center;
