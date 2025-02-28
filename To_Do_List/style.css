@@ -24,6 +24,8 @@ body {
 
 .sec-container {
     background-color: #FBFBFB;
+    display: flex;
+    flex-direction: column;
     width: 90%;
     max-width: 700px;
     min-width: 500px;
@@ -42,4 +44,44 @@ body {
 
 #today {
     color: #FE4A49;
+}
+
+.head {
+    font-size: 25px;
+    color: #00424D;
+    display: flex;
+    justify-content: space-between;
+}
+
+#add-btn {
+    color: #00424D;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+#add-btn:hover {
+    color: #A5AE9E;
+}
+
+.list {
+    list-style: none;
+    margin: auto;
+    border: 1px solid #A5AE9E;
+    padding: 10px;
+}
+
+
+.bottom {
+    text-align: center;
+    color: #00424D;
+    margin-top: auto;
+    font-size: 18px;
+}
+
+#author {
+    margin-top: 2rem;
+    color: #A5AE9E;
+    font-size: 17px;
 }

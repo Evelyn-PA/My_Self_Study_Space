@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <!--Add font-->
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <!--Add font (Icon) awesome-->
+    <script src="https://kit.fontawesome.com/7ab02dac15.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,17 +20,22 @@
             <!--The head of the today list box-->
             <div class="head">
                 <!-- Add title today & plus sign -->
-                <h3> Today</h3>
-                <button>+</button>
+                <h3> Today <i class="fa-solid fa-sun" style="color: #FFD43B;"></i> </h3>
+                <button id="add-btn"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
             </div>
-            <div class="list"></div>
+            <div class=" list-task">
+                <!--The list of today tasks-->
+                <ul id="list">
+                    <li id="task">Task 1</li>
+                </ul>
+            </div>
             <div class="bottom">
                 <!-- The bottom line, motivation-->
-                <h4>"What you accomplish today
+                <h4>"What you accomplish today <br>
                     sets the tone for your future."
                 </h4>
                 <!--Author of this app-->
-                <h4>Made with a smile by Evelyn Nguyen</h4>
+                <h4 id="author">Made with a smile 😊 by Evelyn Nguyen</h4>
 
             </div>
 
