@@ -1,56 +1,38 @@
 //Import firebase to the project and set up the firebase configuration
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js"
-import { getDatabase } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
+import {
+    getDatabase,
+    ref,
+    push
+} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
 
 //Import environment variables from the config.js file
-import { firebaseConfig } from "./config.js"
-
+import { firebaseConfig } from "../Chrome_Extension (Mobile)/config.js"
 
 //Initialize the firebase app and get the database
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 
+//ref() function is used to get a reference to the database
+const referenceInDB = ref(database, "myLeads")
 
-let myLeads = []
+console.log(firebaseConfig.databaseURL)
+
 const inputEl = document.querySelector("#input-el")
 const ulEl = document.querySelector("#ul-el")
 let saveEl = document.querySelector("#save-el")
 const deleteEl = document.querySelector("#delete-btn")
-const tabEl = document.querySelector("#tab-btn")
-
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-
-if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage
-    render(myLeads)
-}
 
 //When the delete button is clicked, the myLeads will be clear
 deleteEl.addEventListener("dblclick", function () {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
 })
 
 //When the button click, the input value is saved to the myLeads array
 //Then the renderLeads function is called to render the list items to the unordered list
 saveEl.addEventListener("click", function () {
-    myLeads.push(inputEl.value)
+    push(referenceInDB, inputEl.value)
     //Clear the input field when the button is clicked
     inputEl.value = ""
-    //save the myLeads array to the local storage as a string
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
-})
-
-//Add the url (tab) while click the save tab button
-tabEl.addEventListener("click", function () {
-    //Using chrome API to take the current tab url
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        render(myLeads)
-    })
 })
 
 
