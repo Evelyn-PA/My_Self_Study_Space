@@ -2,8 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js"
 import {
     getDatabase,
-    ref,
-    push
+    ref, // this function used to create a reference for the database
+    push //add the data to DB
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
 
 //Import environment variables from the config.js file
@@ -13,7 +13,7 @@ import { firebaseConfig } from "../Chrome_Extension (Mobile)/config.js"
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 
-//ref() function is used to get a reference to the database
+//create reference for the database
 const referenceInDB = ref(database, "myLeads")
 
 console.log(firebaseConfig.databaseURL)
