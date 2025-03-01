@@ -1,19 +1,4 @@
-//Import firebase to the project and set up the firebase configuration
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js"
-import { getDatabase } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
-
-//Import environment variables from the config.js file
-import { firebaseConfig } from "./config.js"
-
-const firebaseConfig = {
-    //Add database URL
-    databaseURL: "https://lead-tracker-6d6d2-default-rtdb.europe-west1.firebasedatabase.app/"
-}
-
-const app = initializeApp(firebaseConfig)
-const database = getDatabase(app)
-
-console.log(database)
+Console.log(firebaseConfig.databaseURL)
 
 let myLeads = []
 const inputEl = document.querySelector("#input-el")
