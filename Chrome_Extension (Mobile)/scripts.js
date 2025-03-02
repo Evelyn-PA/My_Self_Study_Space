@@ -3,7 +3,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebas
 import {
     getDatabase,
     ref, // this function used to create a reference for the database
-    push //add the data to DB
+    push, //add the data to DB
+    onValue //listen to the data in the database
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
 
 //Import environment variables from the config.js file
@@ -27,10 +28,13 @@ const deleteEl = document.querySelector("#delete-btn")
 deleteEl.addEventListener("dblclick", function () {
 })
 
-//When the button click, the input value is saved to the myLeads array
-//Then the renderLeads function is called to render the list items to the unordered list
+//Listen to the data in the database
+onValue(referenceInDB, function (snapshot) {
+    console.log(snapshot.val())
+})
+//When the button click, the input value is saved 
 saveEl.addEventListener("click", function () {
-    push(referenceInDB, inputEl.value)
+    push(referenceInDB, inputEl.value) //Using push function to push  the value into the database
     //Clear the input field when the button is clicked
     inputEl.value = ""
 })
