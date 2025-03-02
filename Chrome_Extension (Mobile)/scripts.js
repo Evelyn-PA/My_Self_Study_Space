@@ -9,7 +9,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
 
 //Import environment variables from the config.js file
-import { firebaseConfig } from "../Chrome_Extension (Mobile)/config.js"
+import { firebaseConfig } from "./config.js"
 
 //Initialize the firebase app and get the database
 const app = initializeApp(firebaseConfig)
