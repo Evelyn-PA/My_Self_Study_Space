@@ -89,7 +89,7 @@ ul li {
     font-size: 21px;
 }
 
-ul li.checked {
+.checked {
     /* Remove the space between li and .checked */
     background-image: url("Images/circle-checked.svg");
     background-size: 20px;
