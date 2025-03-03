@@ -7,3 +7,4 @@ listEl.forEach(function (item) {
         this.classList.toggle("checked")
     })
 })
+// Create popup box in the center of the screen to add new tasks
