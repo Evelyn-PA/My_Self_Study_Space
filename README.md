@@ -17,9 +17,9 @@ In this repository, I focus on improving my skills in various programming langua
 ## Technologies Used
 - HTML, CSS, JavaScript
 - Python
-- 
+
 ## Projects
 ### Project 1: Birthday_GIFt_Site
-- **Description**: 
-- **Features**: 
+- **Description**: build a site with some card include GIF.
+- **Features**: CSS flexbox.
 - **Status**: Completed
