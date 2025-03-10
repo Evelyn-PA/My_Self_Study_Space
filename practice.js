@@ -37,3 +37,58 @@ allowedAccess = age >= 18 ? true : false
 
 console.log("allowedAccess: ", allowedAccess);
 
+/* NEW PRACTICE*/
+
+/* Challenge 1: Let's say you're building Reddit. Only users that are either moderators or have reached a certain karma threshold are allowed to upvote. */
+
+const karma = 90;
+const isModerator = true;
+
+// first use a ternary to set hasEnoughKarma to true if karma is above 100. If not, set it to false
+let hasEnoughKarma;
+hasEnoughKarma = karma > 100 ? true : false
+
+//  set the value of canUpvote with short-circuiting (using hasEnoughKarma and isModerator)
+let canUpvote;
+canUpvote = hasEnoughKarma || isModerator 
+console.log("canUpvote:", canUpvote);
+
+/* Challenge 2: Let's say that only moderators who have enough karma are allowed to delete posts.  How would you set the canDelete variable */
+
+// set canDelete to true if both hasEnoughKarma and isModerator is true
+let canDelete;
+canDelete = hasEnoughKarma && isModerator
+
+console.log("canDelete:", canDelete);
+
+
+// Challenge 3: what is the value of user? What if you switch the hasValidEmail variable to false? What if the response is empty?
+
+const response = "JohnDoe";
+const hasValidEmail = true;
+const user = hasValidEmail && (response || "guest");
+// console.log("user: ", user);
+
+// ------------------------------------//
+
+// Challenge: Write a function splitBill() that lets you know how much 
+// you need to pay to split any bill between you and your friends. 
+// It should return a message with a number. 
+
+// Write your code below:
+function splitBill(amount, people){
+    let message = `Each people will pay ${(amount/people).toFixed(2)} for the bill of ${amount}`
+    return message
+}
+
+
+
+// Testing your solution
+console.log(splitBill(10, 2))
+console.log(splitBill(16, 4))
+console.log(splitBill(350, 9))
+ 
+
+
+
+
