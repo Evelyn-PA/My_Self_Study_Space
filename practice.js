@@ -33,7 +33,7 @@ const age = 20;
 let allowedAccess;
 
 // write your code here
-allowedAccess = age >= 18 ? true : false 
+allowedAccess = age >= 18 ? true : false
 
 console.log("allowedAccess: ", allowedAccess);
 
@@ -50,7 +50,7 @@ hasEnoughKarma = karma > 100 ? true : false
 
 //  set the value of canUpvote with short-circuiting (using hasEnoughKarma and isModerator)
 let canUpvote;
-canUpvote = hasEnoughKarma || isModerator 
+canUpvote = hasEnoughKarma || isModerator
 console.log("canUpvote:", canUpvote);
 
 /* Challenge 2: Let's say that only moderators who have enough karma are allowed to delete posts.  How would you set the canDelete variable */
@@ -76,19 +76,28 @@ const user = hasValidEmail && (response || "guest");
 // It should return a message with a number. 
 
 // Write your code below:
-function splitBill(amount, people){
-    let message = `Each people will pay ${(amount/people).toFixed(2)} for the bill of ${amount}`
+function splitBill(amount, people) {
+    let message = `Each people will pay ${(amount / people).toFixed(2)} for the bill of ${amount}`
     return message
 }
 
+//Closure testing
+// Challenge: Write a countdown function with a hard-coded starting number inside closure
+// Stretch goal: Write a countdown function that can count from a provided number,
+// with a provided step
 
+// Start
+function countdown(startNumber, step) {
+    // write your code here
+    let count = startNumber + step
+    return function down() {
+        count -= step;
+        return count
+    }
+}
 
-// Testing your solution
-console.log(splitBill(10, 2))
-console.log(splitBill(16, 4))
-console.log(splitBill(350, 9))
- 
+const countingDown = countdown(10, 2);
 
-
-
-
+console.log(countingDown());
+console.log(countingDown());
+console.log(countingDown());
