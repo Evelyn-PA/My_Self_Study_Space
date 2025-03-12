@@ -101,3 +101,19 @@ const countingDown = countdown(10, 2);
 console.log(countingDown());
 console.log(countingDown());
 console.log(countingDown());
+
+//Arrow Function
+// =>
+
+const username = 'john';
+
+const capitalize = name => `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
+
+function greetUser(name, callback) {
+    return callback(capitalize(name));
+}
+
+const result = greetUser(username, name => `Hi there, ${name}!`);
+
+console.log(result);
+console.log((name => `Hello, nice to meet you ${name}`)("John"))
