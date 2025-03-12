@@ -117,3 +117,9 @@ section {
     align-items: center;
     margin-top: 2rem;
 }
+
+.add-task {
+    display: none;
+    padding: 10px 20px;
+    background-color: #FBFBFB;
+}
