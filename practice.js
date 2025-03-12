@@ -76,31 +76,31 @@ const user = hasValidEmail && (response || "guest");
 // It should return a message with a number. 
 
 // Write your code below:
-function splitBill(amount, people) {
-    let message = `Each people will pay ${(amount / people).toFixed(2)} for the bill of ${amount}`
-    return message
-}
+// function splitBill(amount, people) {
+//     let message = `Each people will pay ${(amount / people).toFixed(2)} for the bill of ${amount}`
+//     return message
+// }
 
-//Closure testing
-// Challenge: Write a countdown function with a hard-coded starting number inside closure
-// Stretch goal: Write a countdown function that can count from a provided number,
-// with a provided step
+// //Closure testing
+// // Challenge: Write a countdown function with a hard-coded starting number inside closure
+// // Stretch goal: Write a countdown function that can count from a provided number,
+// // with a provided step
 
-// Start
-function countdown(startNumber, step) {
-    // write your code here
-    let count = startNumber + step
-    return function down() {
-        count -= step;
-        return count
-    }
-}
+// // Start
+// function countdown(startNumber, step) {
+//     // write your code here
+//     let count = startNumber + step
+//     return function down() {
+//         count -= step;
+//         return count
+//     }
+// }
 
-const countingDown = countdown(10, 2);
+// const countingDown = countdown(10, 2);
 
-console.log(countingDown());
-console.log(countingDown());
-console.log(countingDown());
+// console.log(countingDown());
+// console.log(countingDown());
+// console.log(countingDown());
 
 //Arrow Function
 // =>
@@ -117,3 +117,32 @@ const result = greetUser(username, name => `Hi there, ${name}!`);
 
 console.log(result);
 console.log((name => `Hello, nice to meet you ${name}`)("John"))
+
+/* ----------------------------------- */
+
+// Challenge: Rewrite your first function from a previous challnge to be an arrow function. 
+// Stretch goal: Rewrite counting down closure in arrow function form. 
+
+
+// Challenge start 
+const splitBill = (amount, numPeople) =>
+    `Each person needs to pay ${amount / numPeople}`
+
+console.log(splitBill(10, 2));
+console.log(splitBill(10, 4));
+console.log(splitBill(10, 5));
+
+
+// Stretch goal start
+const countdown = (startingNumber, step) => {
+    let countFromNum = startingNumber + step;
+    return () =>
+        countFromNum -= step;
+}
+
+const countingDown = countdown(20, 2);
+
+console.log(countingDown());
+console.log(countingDown());
+console.log(countingDown());
+
