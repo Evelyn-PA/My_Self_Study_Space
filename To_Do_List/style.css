@@ -120,12 +120,14 @@ section {
 
 .add-task {
     position: absolute;
-    width: 100%;
+    min-width: 300px;
     max-width: 400px;
+    width: 90%;
+    height: 60vh;
     background-color: white;
     padding: 5rem 15rem;
-    margin: 1rem;
-    border-radius: 10px;
+    margin: 0 auto;
+    border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -136,11 +138,14 @@ section {
 
 /* Add style for icon X*/
 #close-btn {
-    color: #00424d;
+    color: #00424D;
     border: none;
-    background-color: transparent   ;
-    margin: 10px;
-    width: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .add-task input,
