@@ -119,7 +119,10 @@ section {
 }
 
 .add-task {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
+    top: 30%;
+    left: 20%;
     min-width: 300px;
     max-width: 400px;
     width: 90%;
@@ -129,6 +132,16 @@ section {
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Add the resonpsive style*/
+@media screen and (max-width: 768px) {
+    .add-task {
+        min-width: auto;
+        padding: 6rem;
+        height: 50vh;
+        width: 95%;
+    }
 }
 
 .input-task {
