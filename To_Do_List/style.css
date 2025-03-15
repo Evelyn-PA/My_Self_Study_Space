@@ -119,10 +119,7 @@ section {
 }
 
 .add-task {
-    position: fixed;
     z-index: 100;
-    top: 1;
-    left: 10%;
     min-width: 300px;
     max-width: 400px;
     width: 90%;
@@ -157,7 +154,10 @@ section {
 }
 
 .add-task input {
+    position: relative;
+    top: 5px;
     font-size: 25px;
+    margin-bottom: 20px;
     padding: 15px;
     height: 50px;
     width: 30rem;
