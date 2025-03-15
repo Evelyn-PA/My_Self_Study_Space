@@ -173,11 +173,31 @@ section {
 }
 
 .input-priority h2 {
-    font-size: 21px;
+    font-size: 25px;
     white-space: nowrap;
     margin-top: -3rem;
 }
 
+.input-priority button {
+    font-size: 22px;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+/*Adjust the high button*/
+.input-priority #high-btn {
+    padding: 5px;
+    width: 8rem;
+    background-color: #FE4A49;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Add hover for "high" btn*/
+.input-priority #high-btn:hover {
+    background-color: #4b4d49;
+}
 
 
 /* Add the responsive style */
