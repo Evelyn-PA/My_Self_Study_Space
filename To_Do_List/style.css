@@ -172,6 +172,13 @@ section {
     border-radius: 15px;
 }
 
+.input-priority h2 {
+    font-size: 21px;
+    white-space: nowrap;
+    margin-top: -3rem;
+}
+
+
 
 /* Add the responsive style */
 @media screen and (max-width: 768px) {
