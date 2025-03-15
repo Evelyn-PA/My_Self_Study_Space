@@ -119,6 +119,7 @@ section {
 }
 
 .add-task {
+    position: absolute;
     z-index: 100;
     min-width: 300px;
     max-width: 400px;
@@ -133,6 +134,11 @@ section {
 .input-task {
     display: flex;
     flex-direction: column;
+}
+
+/*Add the color for placeholder*/
+#input::placeholder {
+    color: #FE4A49;
 }
 
 /* Add style for icon X*/
@@ -153,16 +159,19 @@ section {
     font-family: "Jua", serif;
 }
 
-.add-task input {
-    position: relative;
-    top: 5px;
+.add-task #input {
+    margin-top: -1rem;
     font-size: 25px;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 35px;
     height: 50px;
     width: 30rem;
     text-align: center;
+    background-color: rgba(249, 250, 249, 0.4);
+    border: 2px solid rgb(149, 150, 149);
+    border-radius: 15px;
 }
+
 
 /* Add the responsive style */
 @media screen and (max-width: 768px) {
@@ -175,9 +184,10 @@ section {
         width: 95%;
     }
 
-    .add-task input {
+    .add-task #input {
         font-size: 20px;
         width: 20rem;
         text-align: center;
+        padding: 15px;
     }
 }
