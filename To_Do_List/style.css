@@ -126,6 +126,9 @@ section {
     width: 90%;
     height: 60vh;
     background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 5rem 20rem;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -179,6 +182,10 @@ section {
     text-align: center;
 }
 
+.input-priority {
+    margin-top: 2rem;
+}
+
 .priority-btn {
     margin-top: 1rem;
     display: flex;
@@ -188,7 +195,8 @@ section {
     gap: 3rem;
 }
 
-.priority-btn button {
+.priority-btn button,
+#done-btn {
     font-size: 22px;
     color: #FFFFFF;
     padding: 12px 12px;
@@ -214,8 +222,15 @@ section {
 /*Add hover for btn*/
 #high-btn:hover,
 #medium-btn:hover,
-#low-btn:hover {
+#low-btn:hover,
+#done-btn:hover {
     background-color: #2E2E2E;
+}
+
+/*Add style for "Done" Button*/
+#done-btn {
+    margin-top: 2rem;
+    background-color: #9CEC5B;
 }
 
 /* Add the responsive style */
@@ -223,9 +238,7 @@ section {
     .add-task {
         min-width: auto;
         padding: 6rem;
-        height: 50vh;
-        top: 20%;
-        left: 20%;
+        height: 55vh;
         width: 95%;
     }
 
@@ -239,7 +252,7 @@ section {
 
     .input-priority h2 {
         font-size: 20px;
-        margin-top: 0.5rem;
+        margin-top: -1.5rem;
     }
 
     .priority-btn {
@@ -249,4 +262,12 @@ section {
         margin-right: auto;
         gap: 1rem;
     }
+
+    #done-btn {
+        padding: 10px 5px;
+        margin-top: 1.5em;
+        font-size: 21px;
+    }
+
+
 }
