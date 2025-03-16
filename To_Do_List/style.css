@@ -215,7 +215,7 @@ section {
 #high-btn:hover,
 #medium-btn:hover,
 #low-btn:hover {
-    background-color: #b63333;
+    background-color: #2E2E2E;
 }
 
 /* Add the responsive style */
@@ -230,6 +230,7 @@ section {
     }
 
     .add-task #input {
+        margin-top: -2rem;
         font-size: 20px;
         width: 20rem;
         text-align: center;
