@@ -175,30 +175,48 @@ section {
 .input-priority h2 {
     font-size: 25px;
     white-space: nowrap;
-    margin-top: -3rem;
+    margin-top: -1rem;
+    text-align: center;
 }
 
-.input-priority button {
+.priority-btn {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.priority-btn button {
     font-size: 22px;
     color: #FFFFFF;
-    display: inline-block;
-}
-
-/*Adjust the high button*/
-.input-priority #high-btn {
-    padding: 5px;
+    padding: 12px 12px;
     width: 8rem;
-    background-color: #FE4A49;
     border-radius: 15px;
     border: none;
     cursor: pointer;
 }
 
-/*Add hover for "high" btn*/
-.input-priority #high-btn:hover {
-    background-color: #4b4d49;
+/*Add style for the button*/
+.priority-btn #high-btn {
+    background-color: #FE4A49;
 }
 
+.priority-btn #medium-btn {
+    background-color: #FED766;
+}
+
+.priority-btn #low-btn {
+    background-color: #009FB7;
+}
+
+/*Add hover for btn*/
+#high-btn:hover,
+#medium-btn:hover,
+#low-btn:hover {
+    background-color: #b63333;
+}
 
 /* Add the responsive style */
 @media screen and (max-width: 768px) {
@@ -216,5 +234,18 @@ section {
         width: 20rem;
         text-align: center;
         padding: 15px;
+    }
+
+    .input-priority h2 {
+        font-size: 20px;
+        margin-top: 0.5rem;
+    }
+
+    .priority-btn {
+        padding: 10px 5px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1rem;
     }
 }
