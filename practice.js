@@ -213,8 +213,8 @@ const { music: { traditional, jazz } } = recommendations
 //Another way to destructing object of music:
 // const { traditional, jazz } = recommendations.music
 
-function musicVenues() {
+function musicVenues({ music: { traditional, jazz } }) {
     console.log(`Music venues recommendation: ${traditional}, ${jazz}`)
 }
 
-musicVenues()
+musicVenues(recommendations)
