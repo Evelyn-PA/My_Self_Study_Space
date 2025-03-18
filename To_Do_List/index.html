@@ -23,24 +23,26 @@
                 <h3> Today <i class="fa-solid fa-sun" style="color: #FFD43B;"></i> </h3>
                 <button id="add-btn"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
             </div>
-
-            <section class=add-task>
-                <!-- Add task box-->
-                <div class="input-task">
-                    <button id="close-btn"><i class="fa-solid fa-xmark fa-lg"></i></button>
-                    <input type="text" id="input" placeholder="What's your priority today?">
-                </div>
-                <!--Add task priority-->
-                <div class="input-priority">
-                    <h2> Task Priority Level</h2>
-                    <div class="priority-btn">
-                        <button id="high-btn">High</button>
-                        <button id="medium-btn">Medium</button>
-                        <button id="low-btn">Low</button>
+            <div class="modal-container">
+                <div class="add-task">
+                    <!-- Add task box-->
+                    <div class="input-task">
+                        <button id="close-btn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                        <input type="text" id="input" placeholder="What's your priority today?">
                     </div>
+                    <!--Add task priority-->
+                    <div class="input-priority">
+                        <h2> Task Priority Level</h2>
+                        <div class="priority-btn">
+                            <button id="high-btn">High</button>
+                            <button id="medium-btn">Medium</button>
+                            <button id="low-btn">Low</button>
+                        </div>
+                    </div>
+                    <button id="done-btn">Done</button>
                 </div>
-                <button id="done-btn">Done</button>
-            </section>
+            </div>
+
             <div class=" list-task">
                 <!--The list of today tasks-->
                 <ul id="list">
