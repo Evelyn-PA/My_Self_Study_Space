@@ -8,4 +8,3 @@ listEl.forEach(function (item) {
     })
 })
 // Create popup box in the center of the screen to add new tasks
-.addEventListener
