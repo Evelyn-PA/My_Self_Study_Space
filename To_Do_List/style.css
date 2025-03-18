@@ -127,11 +127,7 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-container.active {
-    visibility: visible;
-    opacity: 1;
-}
-
+/*The modal content*/
 .add-task {
     display: flex;
     flex-direction: column;
@@ -175,6 +171,10 @@ section {
     position: absolute;
     top: 15px;
     right: 15px;
+}
+
+#close-btn:hover {
+    color: #A5AE9E;
 }
 
 .add-task input,
