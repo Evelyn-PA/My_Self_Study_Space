@@ -8,3 +8,14 @@ listEl.forEach(function (item) {
     })
 })
 // Create popup box in the center of the screen to add new tasks
+let modal = document.querySelector(".modal-container")
+let btn = document.querySelector("#add-btn")
+let closeBtn = document.querySelector("#close-btn")
+
+//When the add btn clicked, show the modal
+btn.addEventListener("click", () =>
+    modal.style.display = "block")
+
+//When the close btn clicked, hide the modal
+closeBtn.addEventListener("click", () =>
+    modal.display = "none")
