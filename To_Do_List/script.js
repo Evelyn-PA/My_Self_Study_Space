@@ -18,4 +18,4 @@ btn.addEventListener("click", () =>
 
 //When the close btn clicked, hide the modal
 closeBtn.addEventListener("click", () =>
-    modal.display = "none")
+    modal.style.display = "none") 
