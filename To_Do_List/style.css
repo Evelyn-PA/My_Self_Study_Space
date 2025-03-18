@@ -247,6 +247,13 @@ section {
     background-color: #2E2E2E;
 }
 
+#high-btn:focus,
+#medium-btn:focus,
+#low-btn:focus,
+#done-btn:focus {
+    background-color: #2E2E2E;
+}
+
 /*Add style for "Done" Button*/
 #done-btn {
     margin-top: 2rem;
