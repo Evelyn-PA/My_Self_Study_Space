@@ -30,6 +30,12 @@ lowBtn.addEventListener("click", function () {
     currentColor = "#009FB7"; // Blue color for low priority
 });
 
+//Use local storage to store the data
+//When the user refresh the page, the data will still appear
+if (localStorage.getItem("myOutPut")) {
+    myOutPut = JSON.parse(localStorage.getItem("myOutPut"))
+    render(myOutPut)
+}
 //When the user click done, the input will appear to the screen
 // And the modal will close
 saveBtn.addEventListener("click", function () {
@@ -40,6 +46,7 @@ saveBtn.addEventListener("click", function () {
     modal.style.display = "none"
     //reset the color
     currentColor = ""
+    localStorage.setItem("myOutPut", JSON.stringify(myOutPut))
 })
 
 
