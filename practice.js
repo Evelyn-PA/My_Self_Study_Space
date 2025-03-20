@@ -219,28 +219,55 @@
 
 // musicVenues(recommendations)
 
-//Pracitce Maps
+// //Pracitce Maps
 
-const user1 = { name: "john" }
-const user2 = { name: "mary" }
+// const user1 = { name: "john" }
+// const user2 = { name: "mary" }
 
-const secretKey1 = "asldjfalskdjf";
-const secretKey2 = "alksdjfakjsdf";
+// const secretKey1 = "asldjfalskdjf";
+// const secretKey2 = "alksdjfakjsdf";
 
-const userAndkey = new Map([
-    [user1, secretKey1],
-    [user2, secretKey2]
+// const userAndkey = new Map([
+//     [user1, secretKey1],
+//     [user2, secretKey2]
+// ])
+// console.log(userAndkey)
+
+// //convert to Map
+// const user = {
+//     name: "john",
+//     verified: true  
+//   }
+
+//   const newMap = new Map([
+//     ["name", "John"],
+//     ["verified", true]
+//   ])
+//   console.log(newMap)
+
+
+//------------------------//
+//Practice with Map Challenge//
+// Challenge: 
+// 1. Take the object (contains a favourite place in Brighton, UK), and turn it into a Map
+// 2. Add a boolean property 'visited', to indicate places that you've been to it
+// 3. Add an integer property 'averageBill' with how much you spend there on average
+// 4. Fetch one of the properties using the get() method
+
+const favouritePlace = {
+    music: "jazz",
+    name: "Paris House"
+};
+
+//Turn object into Map
+const favouritePlaceMap = new Map([
+    ["music", "jazz"],
+    ["name", "Paris House"],
+    ["visited", true],
+    ["averageBill", 1000]
 ])
-console.log(userAndkey)
 
-//convert to Map
-const user = {
-    name: "john",
-    verified: true  
-  }
+console.log(favouritePlaceMap.get("name"))
+console.log(favouritePlaceMap)
 
-  const newMap = new Map([
-    ["name", "John"],
-    ["verified", true]
-  ])
-  console.log(newMap)
+favouritePlaceMap.forEach((value, key)=>console.log(key,value))
