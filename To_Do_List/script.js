@@ -67,8 +67,10 @@ function render(input) {
     let outputItems = ""
     for (let i = 0; i < input.length; i++) {
         outputItems += ` 
-        <li style="color: ${input[i].color}" class="${input[i].checked ? 'checked' : ''}">${input[i].text}</li>
-        <i class="fa-solid fa-trash" style="color: #00424d;" id="delete-btn"></i>
+        <li style="color: ${input[i].color}" class="${input[i].checked ? 'checked' : ''}">
+        ${input[i].text}
+        <span><i class="fa-solid fa-trash delete-btn" style="color: #00424d;"></i><span>
+        </li>
         `
     }
     list.innerHTML = outputItems

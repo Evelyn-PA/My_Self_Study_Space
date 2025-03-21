@@ -78,6 +78,9 @@ body {
 }
 
 ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-image: url("Images/circle.svg");
     background-repeat: no-repeat;
     background-size: 20px;
@@ -88,8 +91,8 @@ ul li {
     font-size: 21px;
 }
 
-#delete-btn {
-    font-size: 20px;
+.delete-btn {
+    margin-right: -2rem;
 }
 
 
