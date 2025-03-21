@@ -32,6 +32,7 @@ lowBtn.addEventListener("click", function () {
 
 //Use local storage to store the data
 //When the user refresh the page, the data will still appear
+localStorage.clear("myOutPut")
 if (localStorage.getItem("myOutPut")) {
     myOutPut = JSON.parse(localStorage.getItem("myOutPut"))
     render(myOutPut)
@@ -39,7 +40,7 @@ if (localStorage.getItem("myOutPut")) {
 //When the user click done, the input will appear to the screen
 // And the modal will close
 saveBtn.addEventListener("click", function () {
-    myOutPut.push({ text: input.value, color: currentColor })
+    myOutPut.push({ text: input.value, color: currentColor, checked: false })
     input.value = ""
     render(myOutPut)
     //Close the modal
@@ -54,6 +55,9 @@ saveBtn.addEventListener("click", function () {
 //Feature to tick the task when it's done
 checkList.addEventListener("click", function (event) {
     if (event.target.tagName === "LI") {
+        const index = Array.from(checkList.children).indexOf(event.target); //Find the position of the checked list item in the list.
+        myOutPut[index].checked = !myOutPut[index].checked; //Flip the checked status 
+        localStorage.setItem("myOutPut", JSON.stringify(myOutPut));
         event.target.classList.toggle("checked");
     }
 });
@@ -63,7 +67,7 @@ function render(input) {
     let outputItems = ""
     for (let i = 0; i < input.length; i++) {
         outputItems += `
-        <li style = "color: ${input[i].color}">${input[i].text}</li>
+        <li style="color: ${input[i].color}" class="${input[i].checked ? 'checked' : ''}">${input[i].text}</li>
         `
     }
     list.innerHTML = outputItems
