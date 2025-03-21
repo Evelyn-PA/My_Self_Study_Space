@@ -32,7 +32,6 @@ lowBtn.addEventListener("click", function () {
 
 //Use local storage to store the data
 //When the user refresh the page, the data will still appear
-localStorage.clear("myOutPut")
 if (localStorage.getItem("myOutPut")) {
     myOutPut = JSON.parse(localStorage.getItem("myOutPut"))
     render(myOutPut)
@@ -55,10 +54,10 @@ saveBtn.addEventListener("click", function () {
 //Feature to tick the task when it's done
 checkList.addEventListener("click", function (event) {
     if (event.target.tagName === "LI") {
-        const index = Array.from(checkList.children).indexOf(event.target); //Find the position of the checked list item in the list.
-        myOutPut[index].checked = !myOutPut[index].checked; //Flip the checked status 
-        localStorage.setItem("myOutPut", JSON.stringify(myOutPut));
         event.target.classList.toggle("checked");
+        const index = Array.from(event.target.parentNode.children).indexOf(event.target);//Check location of the items
+        myOutPut[index].checked = !myOutPut[index].checked; // Slipt the checked status of the items
+        localStorage.setItem("myOutPut", JSON.stringify(myOutPut))
     }
 });
 
@@ -69,6 +68,7 @@ function render(input) {
     for (let i = 0; i < input.length; i++) {
         outputItems += ` 
         <li style="color: ${input[i].color}" class="${input[i].checked ? 'checked' : ''}">${input[i].text}</li>
+        <i class="fa-solid fa-trash" style="color: #00424d;" id="delete-btn"></i>
         `
     }
     list.innerHTML = outputItems
