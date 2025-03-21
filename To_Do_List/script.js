@@ -63,10 +63,11 @@ checkList.addEventListener("click", function (event) {
 });
 
 //Function render the input
+//Add a class, check if the item was checked -> apply the checked class
 function render(input) {
     let outputItems = ""
     for (let i = 0; i < input.length; i++) {
-        outputItems += `
+        outputItems += ` 
         <li style="color: ${input[i].color}" class="${input[i].checked ? 'checked' : ''}">${input[i].text}</li>
         `
     }
