@@ -88,6 +88,11 @@ ul li {
     font-size: 21px;
 }
 
+#delete-btn {
+    font-size: 20px;
+}
+
+
 .checked {
     /* Remove the space between li and .checked */
     background-image: url("Images/circle-checked.svg");
