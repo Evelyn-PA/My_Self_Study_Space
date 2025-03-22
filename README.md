@@ -9,6 +9,7 @@ Welcome to my self-study project! This repository contains various projects and 
 - First_portfolio
 - Passengers_Counter_App
 - Space_Explore
+- Today_List
 - HackerRank.py
 
 ## Project Overview
