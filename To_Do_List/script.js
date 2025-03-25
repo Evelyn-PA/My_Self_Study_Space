@@ -70,9 +70,12 @@ saveBtn.addEventListener("click", function () {
 checkList.addEventListener("click", function (event) {
     if (event.target.tagName === "LI") {
         event.target.classList.toggle("checked")
+        const index = Array.from(event.target.parentNode.children).indexOf(event.target);//Check location of the items
+        myOutPut[index].checked = !myOutPut[index].checked; // Slipt the checked status of the items
     }
     else if (event.target.tagName === "I") {
         event.target.closest("li").remove()
+        
     }
 })
 
