@@ -69,15 +69,18 @@ saveBtn.addEventListener("click", function () {
 
 checkList.addEventListener("click", function (event) {
     if (event.target.tagName === "LI") {
-        event.target.classList.toggle("checked")
-        const index = Array.from(event.target.parentNode.children).indexOf(event.target);//Check location of the items
-        myOutPut[index].checked = !myOutPut[index].checked; // Slipt the checked status of the items
+        event.target.classList.toggle("checked");
+        const index = Array.from(event.target.parentNode.children).indexOf(event.target); // Check location of the items
+        myOutPut[index].checked = !myOutPut[index].checked; // Toggle the checked status of the items
+        localStorage.setItem("myOutPut", JSON.stringify(myOutPut));
+    } else if (event.target.tagName === "I") {
+        const listItem = event.target.closest("li");
+        const index = Array.from(listItem.parentNode.children).indexOf(listItem); // Check location of the items
+        myOutPut.splice(index, 1); // Remove the item from the array
+        listItem.remove(); // Remove the item from the DOM
+        localStorage.setItem("myOutPut", JSON.stringify(myOutPut));
     }
-    else if (event.target.tagName === "I") {
-        event.target.closest("li").remove()
-        
-    }
-})
+});
 
 //Function render the input
 //Add a class, check if the item was checked -> apply the checked class
