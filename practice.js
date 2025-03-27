@@ -317,9 +317,30 @@
 
 // Exercise 2: Finding an index using indexOf
 // Given an array of names, write a function to return the index of a given name.
-function findNameIndex(names, nameFind) {
-    return names.indexOf(nameFind)
-}
-let friends = ["Alice", "Bob", "Charlie", "David"];
-console.log(findNameIndex(friends, "Charlie")); // Expected output: 2
-console.log(findNameIndex(friends, "Eve")); // Expected output: -1 (not found)
+// function findNameIndex(names, nameFind) {
+//     return names.indexOf(nameFind)
+// }
+// let friends = ["Alice", "Bob", "Charlie", "David"];
+// console.log(findNameIndex(friends, "Charlie")); // Expected output: 2
+// console.log(findNameIndex(friends, "Eve")); // Expected output: -1 (not found)
+
+//Challenge
+// Write a function that removes all even numbers from an array.
+// function removeEvenNumber(num) {
+//     //Use fillter to make a new array that contain only non even number
+//     return num.filter (n => n %2 != 0)
+// }
+
+// const numbers = [10, 25, 32, 47, 51, 60, 77, 88, 99];
+// result = removeEvenNumber(numbers)
+// console.log(result)
+
+const numbers = [2, 3, 4, 5];
+
+// Use .reduce() to **multiply** all numbers together
+const product = numbers.reduce((multiply, count) => multiply * count, 1)
+console.log(product); // Expected Output: 120
+
+
+
+
