@@ -335,12 +335,21 @@
 // result = removeEvenNumber(numbers)
 // console.log(result)
 
-const numbers = [2, 3, 4, 5];
+// const numbers = [2, 3, 4, 5];
 
-// Use .reduce() to **multiply** all numbers together
-const product = numbers.reduce((multiply, count) => multiply * count, 1)
-console.log(product); // Expected Output: 120
+// // Use .reduce() to **multiply** all numbers together
+// const product = numbers.reduce((multiply, count) => multiply * count, 1)
+// console.log(product); // Expected Output: 120
 
+// Practice Task, try to use .reduce() to find the longest word in this array:
+const words = ["apple", "banana", "watermelon", "grape"];
+//Pesudo code
+//use recude loop through the array -> compare 2 word of array, return the most longest characters
+const longest = words.reduce(((acc, word) => {
+    return word.length > acc.length ? word: acc
+}))
+
+console.log(longest)
 
 
 
