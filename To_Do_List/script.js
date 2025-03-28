@@ -50,23 +50,6 @@ saveBtn.addEventListener("click", function () {
     localStorage.setItem("myOutPut", JSON.stringify(myOutPut))
 })
 
-
-
-//Feature to tick the task when it's done
-// checkList.addEventListener("click", function (event) {
-//     if (event.target.tagName === "LI") {
-//         event.target.classList.toggle("checked");
-//         const index = Array.from(event.target.parentNode.children).indexOf(event.target);//Check location of the items
-//         myOutPut[index].checked = !myOutPut[index].checked; // Slipt the checked status of the items
-
-//     }
-//     else if (event.target.tagName === "SPAN") {
-//         event.target.parentElement.remove()
-//     }
-//     localStorage.setItem("myOutPut", JSON.stringify(myOutPut))
-// }
-// );
-
 checkList.addEventListener("click", function (event) {
     if (event.target.tagName === "LI") {
         event.target.classList.toggle("checked");
@@ -74,6 +57,7 @@ checkList.addEventListener("click", function (event) {
         myOutPut[index].checked = !myOutPut[index].checked; // Toggle the checked status of the items
         localStorage.setItem("myOutPut", JSON.stringify(myOutPut));
     } else if (event.target.tagName === "I") {
+
         const listItem = event.target.closest("li");
         const index = Array.from(listItem.parentNode.children).indexOf(listItem); // Check location of the items
         myOutPut.splice(index, 1); // Remove the item from the array
@@ -88,7 +72,7 @@ function render(input) {
     let outputItems = ""
     for (let i = 0; i < input.length; i++) {
         outputItems += ` 
-        <li style="color: ${input[i].color}" class="${input[i].checked ? 'checked' : ''}">
+        <li style="color: ${input[i].color}};" class="${input[i].checked ? 'checked' : ''}">
         ${input[i].text}
         <span><i class="fa-solid fa-trash delete-btn" style="color: #00424d;"></i></span>
         </li>
