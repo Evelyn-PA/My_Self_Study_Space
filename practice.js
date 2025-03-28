@@ -356,17 +356,31 @@
 // Stretch goal: 
 // Use reduce to sum the weights of only the electric cars 
 
-const cars = [
-    { name: "Toyota", isElectric: false, weight: 1320 },
-    { name: "Ford", isElectric: false, weight: 1400 },
-    { name: "Volkswagen", isElectric: false, weight: 1370 },
-    { name: "Honda", isElectric: false, weight: 1375 },
-    { name: "Tesla", isElectric: true, weight: 1750 },
-    { name: "BMW", isElectric: true, weight: 1350 },
-];
+// const cars = [
+//     { name: "Toyota", isElectric: false, weight: 1320 },
+//     { name: "Ford", isElectric: false, weight: 1400 },
+//     { name: "Volkswagen", isElectric: false, weight: 1370 },
+//     { name: "Honda", isElectric: false, weight: 1375 },
+//     { name: "Tesla", isElectric: true, weight: 1750 },
+//     { name: "BMW", isElectric: true, weight: 1350 },
+// ];
 
-const sum = cars.reduce((acc, item) => {
-    return item.isElectric == true ? acc + item.weight : 0
-}, 0)
+// const sum = cars.reduce((acc, item) => {
+//     return item.isElectric == true ? acc + item.weight : acc
+// }, 0)
 
-console.log(sum)
+// console.log(sum)
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// //use reduce to multiply the numbers and return in a new array
+// const multiply = numbers.reduce((acc, num) =>{
+//     acc.push(num*2)
+//     return acc
+// }, [])
+// console.log(`Double numbers: ${multiply}`)
+// console.log(`Numbers: ${numbers}`)
+
+const lunchMenu = ['salad', 'lohi keito', 'liha pullat']
+const newMenu = [...lunchMenu, "ice cream", "wine", "sandwiches"]
+console.log(lunchMenu)
+console.log(newMenu)
