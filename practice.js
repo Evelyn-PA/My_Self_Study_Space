@@ -398,12 +398,34 @@
 // console.log(newWorkoutRoutine); // Expected output: ["Jumping Jacks", "Plank", "Squat
 
 //You have a list of students enrolled in a class, but "Alex" has dropped out. Use .findIndex() and .slice() to remove "Alex" from the list without modifying the original array.
-const students = ["John", "Sara", "Alex", "Michael", "Emily"];
-const studentIndex = students.findIndex(name => name === "Alex")
+// const students = ["John", "Sara", "Alex", "Michael", "Emily"];
+// const studentIndex = students.findIndex(name => name === "Alex")
 
-const updatedStudents =[...students.slice(0, studentIndex), 
-    ...students.slice(studentIndex+1)
-]
+// const updatedStudents =[...students.slice(0, studentIndex), 
+//     ...students.slice(studentIndex+1)
+// ]
 
 
-console.log(updatedStudents); // Expected output: ["John", "Sara", "Michael", "Emily"]
+// console.log(updatedStudents); // Expected output: ["John", "Sara", "Michael", "Emily"]
+
+// Challenge: 
+// In our restaurant, the chef has some favourite dishes in two different categories.
+// The chef loves all dishes that start with "S", while the rest are regular dishes
+// Use array destructoring to create arrays of the chefs favourite dishes of meat and
+// fish, and to create arrays of the regular meat and fish dishes
+
+const fishDishes = ['Salmon Rillettes', 'Grilled Tuna Provencal', 'Fish and Chips']
+const meatDishes = ['Lasagna', 'Spaghetti', 'Satay Chicken Skewers']
+
+function findDishesStartWithS(array){
+    return array.filter(value => value.startsWith("S"))
+}
+// Modify these four variables first
+let chefsFishDishes = findDishesStartWithS(fishDishes);
+let regularFishDishes = fishDishes.filter(fishDishes => !fishDishes.startsWith("S"))
+let chefsMeatDishes = findDishesStartWithS(meatDishes)
+let regularMeatDishes = meatDishes.filter(dish => !dish.startsWith("S"))
+
+// Finally, use the spread operator to create these two arrays as well
+let chefsDishes = [...chefsFishDishes, ...chefsMeatDishes]
+let regularDishes = [...regularFishDishes, ...regularMeatDishes]
