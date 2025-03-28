@@ -380,7 +380,30 @@
 // console.log(`Double numbers: ${multiply}`)
 // console.log(`Numbers: ${numbers}`)
 
-const lunchMenu = ['salad', 'lohi keito', 'liha pullat']
-const newMenu = [...lunchMenu, "ice cream", "wine", "sandwiches"]
-console.log(lunchMenu)
-console.log(newMenu)
+// const lunchMenu = ['salad', 'lohi keito', 'liha pullat']
+// const newMenu = [...lunchMenu, "ice cream", "wine", "sandwiches"]
+// console.log(lunchMenu)
+// console.log(newMenu)
+
+// const workoutRoutine = ["Jumping Jacks", "Push-ups", "Squats", "Lunges", "Burpees"];
+// const jumpingIndex = workoutRoutine.findIndex(workout => workout  === "Jumping Jacks")
+// const squatsIndex = workoutRoutine.findIndex (squat => squat === "Squats")
+
+// const newWorkoutRoutine = [
+//     ...workoutRoutine.slice(0,jumpingIndex+1), "Plank", ...workoutRoutine.slice(squatsIndex+1)
+
+// ]
+
+
+// console.log(newWorkoutRoutine); // Expected output: ["Jumping Jacks", "Plank", "Squat
+
+//You have a list of students enrolled in a class, but "Alex" has dropped out. Use .findIndex() and .slice() to remove "Alex" from the list without modifying the original array.
+const students = ["John", "Sara", "Alex", "Michael", "Emily"];
+const studentIndex = students.findIndex(name => name === "Alex")
+
+const updatedStudents =[...students.slice(0, studentIndex), 
+    ...students.slice(studentIndex+1)
+]
+
+
+console.log(updatedStudents); // Expected output: ["John", "Sara", "Michael", "Emily"]
