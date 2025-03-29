@@ -437,19 +437,25 @@
 
 // Beginning:
 
-function Book(id, title, author, themes =[]) {
-	// your code here
+function Book(id, title, author, themes = []) {
+    // your code here
     this.id = id
-    this. title = title
-    this. author = author
+    this.title = title
+    this.author = author
     this.themes = themes
 }
 //Add themes by prototype
-Book.prototype.addThemes = function (themes){
-    this.themes = [...this.themes, themes]
+Book.prototype.addThemes = function (newThem) {
+    this.themes = [...this.themes, newThem]
+
 }
 
- const book1 = new Book (1, "Harry Potter", "JK")
+//Add remove themes 
+Book.prototype.removeThemes = function (removeThemes) {
+    this.themes = this.themes.filter(t => t !== removeThemes);
+}
+
+const book1 = new Book(1, "Harry Potter", "JK")
 book1.addThemes("Fiction")
+book1.removeThemes("Fiction")
 console.log(book1)
- 
