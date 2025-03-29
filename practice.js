@@ -414,18 +414,42 @@
 // Use array destructoring to create arrays of the chefs favourite dishes of meat and
 // fish, and to create arrays of the regular meat and fish dishes
 
-const fishDishes = ['Salmon Rillettes', 'Grilled Tuna Provencal', 'Fish and Chips']
-const meatDishes = ['Lasagna', 'Spaghetti', 'Satay Chicken Skewers']
+// const fishDishes = ['Salmon Rillettes', 'Grilled Tuna Provencal', 'Fish and Chips']
+// const meatDishes = ['Lasagna', 'Spaghetti', 'Satay Chicken Skewers']
 
-function findDishesStartWithS(array){
-    return array.filter(value => value.startsWith("S"))
+// function findDishesStartWithS(array){
+//     return array.filter(value => value.startsWith("S"))
+// }
+// // Modify these four variables first
+// let chefsFishDishes = findDishesStartWithS(fishDishes);
+// let regularFishDishes = fishDishes.filter(fishDishes => !fishDishes.startsWith("S"))
+// let chefsMeatDishes = findDishesStartWithS(meatDishes)
+// let regularMeatDishes = meatDishes.filter(dish => !dish.startsWith("S"))
+
+// // Finally, use the spread operator to create these two arrays as well
+// let chefsDishes = [...chefsFishDishes, ...chefsMeatDishes]
+// let regularDishes = [...regularFishDishes, ...regularMeatDishes]
+
+// 1. create a new constructor function, Book, which logs books in the school library (id, title, author, themes[]), 
+// 2. Add ids, titles and authors for your two favourite books. 
+// 3. Use the prototype keyword to add a theme property to the  books. 
+// 4. Add at least one theme to each of your books. 
+
+// Beginning:
+
+function Book(id, title, author, themes =[]) {
+	// your code here
+    this.id = id
+    this. title = title
+    this. author = author
+    this.themes = themes
 }
-// Modify these four variables first
-let chefsFishDishes = findDishesStartWithS(fishDishes);
-let regularFishDishes = fishDishes.filter(fishDishes => !fishDishes.startsWith("S"))
-let chefsMeatDishes = findDishesStartWithS(meatDishes)
-let regularMeatDishes = meatDishes.filter(dish => !dish.startsWith("S"))
+//Add themes by prototype
+Book.prototype.addThemes = function (themes){
+    this.themes = [...this.themes, themes]
+}
 
-// Finally, use the spread operator to create these two arrays as well
-let chefsDishes = [...chefsFishDishes, ...chefsMeatDishes]
-let regularDishes = [...regularFishDishes, ...regularMeatDishes]
+ const book1 = new Book (1, "Harry Potter", "JK")
+book1.addThemes("Fiction")
+console.log(book1)
+ 
