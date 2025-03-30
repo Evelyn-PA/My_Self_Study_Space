@@ -437,25 +437,39 @@
 
 // Beginning:
 
-function Book(id, title, author, themes = []) {
-    // your code here
-    this.id = id
-    this.title = title
-    this.author = author
-    this.themes = themes
-}
-//Add themes by prototype
-Book.prototype.addThemes = function (newThem) {
-    this.themes = [...this.themes, newThem]
+// function Book(id, title, author, themes = []) {
+//     // your code here
+//     this.id = id
+//     this.title = title
+//     this.author = author
+//     this.themes = themes
+// }
+// //Add themes by prototype
+// Book.prototype.addThemes = function (newThem) {
+//     this.themes = [...this.themes, newThem]
 
-}
+// }
 
-//Add remove themes 
-Book.prototype.removeThemes = function (removeThemes) {
-    this.themes = this.themes.filter(t => t !== removeThemes);
-}
+// //Add remove themes 
+// Book.prototype.removeThemes = function (removeThemes) {
+//     this.themes = this.themes.filter(t => t !== removeThemes);
+// }
 
-const book1 = new Book(1, "Harry Potter", "JK")
-book1.addThemes("Fiction")
-book1.removeThemes("Fiction")
-console.log(book1)
+// const book1 = new Book(1, "Harry Potter", "JK")
+// book1.addThemes("Fiction")
+// book1.removeThemes("Fiction")
+// console.log(book1)
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    for(var i = 0; i++; i<nums.length){
+        var number = nums[i]++
+        if(number === target){
+            return number 
+        }
+    }
+}; 
