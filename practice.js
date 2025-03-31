@@ -467,29 +467,91 @@
 // 3. Instantiate a new instance of the class using data from your your favourite film. Add at least 1 genre to your film using addGenre(), and get the title using getFilmTitle()
 
 // Beginning:
-class Film {
-    //Your code here.
-    constructor(id, title, director, releaseYear, genres = []) {
-        this.id = id
-        this.title = title
-        this.director = director
-        this.releaseYear = releaseYear
-        this.genres = Array.isArray(genres) ? genres : [];
+// class Film {
+//     //Your code here.
+//     constructor(id, title, director, releaseYear, genres = []) {
+//         this.id = id
+//         this.title = title
+//         this.director = director
+//         this.releaseYear = releaseYear
+//         this.genres = Array.isArray(genres) ? genres : [];
+//     }
+
+//     // Create method
+//     addGenre(genre) {
+//         this.genres = [... this.genres, genre];
+//     }
+
+//     //Create getFilmTitle
+//     getFilmTitle() {
+//         console.log(this.title)
+//     }
+// }
+
+// // Rest of your code here. 
+// const film1 = new Film(1, "Hello", "JK", 2003, ["fiction"])
+// film1.getFilmTitle()
+// film1.addGenre("novel")
+// console.log(film1)
+
+// class Product {
+//     constructor(name, price, discountable) {
+//       this.name = name;
+//       this.price = price;
+//       this.discountable = discountable;  
+//     }  
+
+//     isDiscountable() {
+//       return this.discountable;  
+//     }
+//   }
+
+//   class SaleProduct extends Product {
+//     constructor(name, price, discountable, percentOff) {
+//        super(name, price, discountable);
+//        this.percentOff = percentOff; 
+//     }  
+
+//     getSalePrice() {
+//        if (super.isDiscountable()) {
+//          return this.price * ((100 - this.percentOff) / 100);
+//        } else {
+//           return `${this.name} is not eligible for a discount`;
+//        }
+//     }
+//   }
+
+//   const saleProduct1 = new SaleProduct("Coffee Maker", 99, false, 20);
+//   console.log(saleProduct1.getSalePrice());
+
+//Create a Vehicle class with properties brand, year, and isElectric.
+//Then, create a subclass Car that extends Vehicle and adds model and mileage.
+class Vehicle {
+    constructor(brand, year, isElectric) {
+        this.brand = brand
+        this.year = year
+        this.isElectric = isElectric
     }
 
-    // Create method
-    addGenre(genre) {
-        this.genres = [... this.genres, genre];
+    //Add method getInfo() to check the car energy (Gas/electric)
+    getInfo() {
+        const result = (this.isElectric)=== true ? `${this.brand} (${this.year}) - Electric`: `${this.brand} (${this.year}) - Gasoline`
+        return result
     }
 
-    //Create getFilmTitle
-    getFilmTitle() {
-        console.log(this.title)
+}
+class Car extends Vehicle{
+    constructor(brand, year, isElectric, model, mileage){
+        super(brand, year, isElectric)
+        this.model = model
+        this.mileage = mileage
+    }
+    //Create new nethod getMileage()
+    getMileage(){
+        return `this ${this.model} has ${this.mileage} miles.`
     }
 }
 
-// Rest of your code here. 
-const film1 = new Film(1, "Hello", "JK", 2003, ["fiction"])
-film1.getFilmTitle()
-film1.addGenre("novel")
-console.log(film1)
+const myCar1 = new Car ("Toyota", 2019, false, "Corolla", 30000)
+console.log(myCar1.getInfo())
+console.log(myCar1.getMileage())
