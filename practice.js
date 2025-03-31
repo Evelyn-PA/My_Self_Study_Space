@@ -526,32 +526,48 @@
 
 //Create a Vehicle class with properties brand, year, and isElectric.
 //Then, create a subclass Car that extends Vehicle and adds model and mileage.
-class Vehicle {
-    constructor(brand, year, isElectric) {
-        this.brand = brand
-        this.year = year
-        this.isElectric = isElectric
-    }
+// class Vehicle {
+//     constructor(brand, year, isElectric) {
+//         this.brand = brand
+//         this.year = year
+//         this.isElectric = isElectric
+//     }
 
-    //Add method getInfo() to check the car energy (Gas/electric)
-    getInfo() {
-        const result = (this.isElectric)=== true ? `${this.brand} (${this.year}) - Electric`: `${this.brand} (${this.year}) - Gasoline`
-        return result
-    }
+//     //Add method getInfo() to check the car energy (Gas/electric)
+//     getInfo() {
+//         const result = (this.isElectric)=== true ? `${this.brand} (${this.year}) - Electric`: `${this.brand} (${this.year}) - Gasoline`
+//         return result
+//     }
 
-}
-class Car extends Vehicle{
-    constructor(brand, year, isElectric, model, mileage){
-        super(brand, year, isElectric)
-        this.model = model
-        this.mileage = mileage
-    }
-    //Create new nethod getMileage()
-    getMileage(){
-        return `this ${this.model} has ${this.mileage} miles.`
-    }
-}
+// }
+// class Car extends Vehicle{
+//     constructor(brand, year, isElectric, model, mileage){
+//         super(brand, year, isElectric)
+//         this.model = model
+//         this.mileage = mileage
+//     }
+//     //Create new nethod getMileage()
+//     getMileage(){
+//         return `this ${this.model} has ${this.mileage} miles.`
+//     }
+// }
 
-const myCar1 = new Car ("Toyota", 2019, false, "Corolla", 30000)
-console.log(myCar1.getInfo())
-console.log(myCar1.getMileage())
+// const myCar1 = new Car ("Toyota", 2019, false, "Corolla", 30000)
+// console.log(myCar1.getInfo())
+// console.log(myCar1.getMileage())
+
+class Product {
+    constructor(name, price, discountable) {
+      this.name = name;
+      this.price = price;
+      this.discountable = discountable;
+    }
+  
+    get clearancePrice() {
+      return this.price * 0.5;
+    }
+  }
+  
+const product1 = new Product("Coffee Maker", 99.95, false);
+//   product1.price = {};
+console.log(product1.clearancePrice); // Expected output: 49.975
