@@ -577,9 +577,25 @@
 // 2. Create an h2 with class 'tagline' and text "I can create HTML elements!"
 // Add it right under the modified text.
 
-const title = document.querySelector('h1');
-title.innerHTML = `Creating and midifying HTML elements`
-const tagLine = document.createElement("h2")
-tagLine.className = "tagline"
-tagLine.innerHTML = `I can create HTML elements!`
-title.append(tagLine)
+// const title = document.querySelector('h1');
+// title.innerHTML = `Creating and midifying HTML elements`
+// const tagLine = document.createElement("h2")
+// tagLine.className = "tagline"
+// tagLine.innerHTML = `I can create HTML elements!`
+// title.append(tagLine)
+
+// Challenge: 
+// 1. Select h1 and add a click event listener. 
+// Log the text from the element to the console.
+
+// 2. Add the same functionality to all the elements displayed
+// in Scrimba web browser. Finally, try to trigger the event when you
+// hover the mouse over the elements, instead of when clicking on them
+
+const titleEl = document.querySelector('h1')
+titleEl.addEventListener("mouseover", (event) => {
+  console.log(event.target.textContent)
+})
+document.body.addEventListener('mouseover', (event) => {
+  console.log(event.target.textContent)
+})
