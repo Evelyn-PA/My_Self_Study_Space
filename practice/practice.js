@@ -605,8 +605,24 @@
 // console.log('done');
 
 // GET /posts/1 - single blog post: http://jsonplaceholder.typicode.com/posts
-
-fetch("https://jsonplaceholder.typicode.com/posts/1")
-  .then(response => response.json()) // Turn the data to Json format to better read
-  .then( data => console.log(data.title))
+//POST / posts -> Post a new post
+const blogPost = {
+  title: "Coolest post",
+  body: "Hello this is my first porst using fetch()",
+  userId: 1
+}
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(blogPost)
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+  }) // Turn the data to Json format to better read
+  .then(data => console.log(data))
+  .catch(erorr => console.error(erorr))
 
