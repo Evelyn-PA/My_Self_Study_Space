@@ -599,7 +599,14 @@
 // document.body.addEventListener('mouseover', (event) => {
 //   console.log(event.target.textContent)
 // })
-navigator.geolocation.getCurrentPosition(position => {
-  console.log(position);
-});
-console.log('done');
+// navigator.geolocation.getCurrentPosition(position => {
+//   console.log(position);
+// });
+// console.log('done');
+
+// GET /posts/1 - single blog post: http://jsonplaceholder.typicode.com/posts
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => response.json()) // Turn the data to Json format to better read
+  .then( data => console.log(data.title))
+
