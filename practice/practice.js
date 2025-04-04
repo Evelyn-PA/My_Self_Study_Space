@@ -606,23 +606,43 @@
 
 // GET /posts/1 - single blog post: http://jsonplaceholder.typicode.com/posts
 //POST / posts -> Post a new post
-const blogPost = {
-  title: "Coolest post",
-  body: "Hello this is my first porst using fetch()",
-  userId: 1
-}
-fetch("https://jsonplaceholder.typicode.com/posts", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(blogPost)
-})
+// const blogPost = {
+//   title: "Coolest post",
+//   body: "Hello this is my first porst using fetch()",
+//   userId: 1
+// }
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json"
+//   },
+//   body: JSON.stringify(blogPost)
+// })
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+//   }) // Turn the data to Json format to better read
+//   .then(data => console.log(data))
+//   .catch(erorr => console.error(erorr))
+
+// Challenge: 
+// The JSON Placeholder API has /users endpoint, 
+// just like the one we saw in the tutorial for /posts
+// Get the user with ID 3 and log their name and company they work for.
+// Handle errors if something does not quite work. 
+
+// Here's the endpoint: https://jsonplaceholder.typicode.com/users/3
+
+fetch("https://jsonplaceholder.typicode.com/users/3")
   .then(response => {
     if (!response.ok) {
-      throw new Error(response.status);
+      throw new Error(response.status)
     }
-  }) // Turn the data to Json format to better read
-  .then(data => console.log(data))
-  .catch(erorr => console.error(erorr))
-
+    return response.json()
+  })
+  .then(data => {
+    console.log(data.name);
+    console.log(data.company.name)
+  })
+  .catch(error => console.error(error))
