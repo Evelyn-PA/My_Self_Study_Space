@@ -634,22 +634,36 @@
 
 // Here's the endpoint: https://jsonplaceholder.typicode.com/users/3
 
-fetch("https://jsonplaceholder.typicode.com/users/3")
-  .then(response => {
+// fetch("https://jsonplaceholder.typicode.com/users/3")
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status)
+//     }
+//     return response.json()
+//   })
+//   .then(data => {
+//     console.log(data.name);
+//     console.log(data.company.name)
+//   })
+//   .catch(error => console.error(error)) 
+
+// async function getPost(){
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/3") //wait for the URL to response
+//   const data = await response.json() //Wait to parse to JSON
+//   console.log(data)
+// }
+// getPost()
+
+async function getGithubUser() {
+  try {
+    const response = await fetch('https://api.github.com/users/fsadfsadf')
     if (!response.ok) {
       throw new Error(response.status)
     }
-    return response.json()
-  })
-  .then(data => {
-    console.log(data.name);
-    console.log(data.company.name)
-  })
-  .catch(error => console.error(error)) 
+  } catch (error) {
+    console.log("Could not fetch user, try reconnecting your internet.")
+    console.error(error)
+  }
 
-async function getPost(){
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/3") //wait for the URL to response
-  const data = await response.json() //Wait to parse to JSON
-  console.log(data)
 }
-getPost()
+getGithubUser()
