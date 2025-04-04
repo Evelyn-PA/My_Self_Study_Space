@@ -654,16 +654,48 @@
 // }
 // getPost()
 
-async function getGithubUser() {
+// async function getGithubUser() {
+//   try {
+//     const response = await fetch('https://api.github.com/users/fsadfsadf')
+//     if (!response.ok) {
+//       throw new Error(response.status)
+//     }
+//   } catch (error) {
+//     console.log("Could not fetch user, try reconnecting your internet.")
+//     console.error(error)
+//   }
+
+// }
+// getGithubUser()
+
+// Challenge: 
+// Rewrite the GET API call from the previous challenge using async-await
+
+
+// // Challenge: 
+// fetch('https://jsonplaceholder.typicode.com/users/3')
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+
+//     return response.json()
+//   })
+//   .then(person => console.log(`${person.name} works for ${person.company.name}`))
+//   .catch(err => console.error(err))
+
+async function getUser() {
   try {
-    const response = await fetch('https://api.github.com/users/fsadfsadf')
+    const response = await fetch("https://jsonplaceholder.typicode.com/users/3")
     if (!response.ok) {
       throw new Error(response.status)
     }
-  } catch (error) {
-    console.log("Could not fetch user, try reconnecting your internet.")
-    console.error(error)
+    const person = await response.json()
+    console.log(`${person.name} works for ${person.company.name}`)
   }
-
+  catch (err) {
+    console.error(err);
+  }
 }
-getGithubUser()
+
+getUser()
