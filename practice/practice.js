@@ -645,4 +645,11 @@ fetch("https://jsonplaceholder.typicode.com/users/3")
     console.log(data.name);
     console.log(data.company.name)
   })
-  .catch(error => console.error(error))
+  .catch(error => console.error(error)) 
+
+async function getPost(){
+  const response = await fetch("https://jsonplaceholder.typicode.com/users/3") //wait for the URL to response
+  const data = await response.json() //Wait to parse to JSON
+  console.log(data)
+}
+getPost()
