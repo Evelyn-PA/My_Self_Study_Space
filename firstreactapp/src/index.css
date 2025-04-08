@@ -8,3 +8,11 @@ body {
 h1 {
   margin-top: 40px;
 }
+
+img {
+  display: flex;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 5rem;
+  padding: 10px;
+}
