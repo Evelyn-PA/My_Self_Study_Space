@@ -5,6 +5,16 @@ body {
   text-align: auto;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 h1 {
   text-align: left;
   margin-top: 40px;
@@ -12,13 +22,21 @@ h1 {
 }
 
 img {
-  display: flex;
   margin-right: auto;
   margin-top: 1rem;
   width: 5rem;
   padding: 10px;
 }
 
+
+
 .content {
   font-size: 1.5rem;
+}
+
+footer {
+  background-color: whitesmoke;
+  color: black;
+  font-weight: 400;
+  text-align: center;
 }
