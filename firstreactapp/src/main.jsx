@@ -34,6 +34,7 @@ Part 2:
  */
 
 import { createRoot } from "react-dom/client"
+import { Fragment } from "react";
 import "./index.css";
 const root = createRoot(document.getElementById("root"))
 root.render(
@@ -47,7 +48,7 @@ root.render(
 //create component
 function TemporaryName() {
   return (
-    <main>
+    <Fragment>
       <div className="header">
         <img src="\images\tips.png" alt="mylogo" />
       </div>
@@ -59,9 +60,9 @@ function TemporaryName() {
           <li>I want to travel around the world.</li>
           <li>I want to live a peaceful life.</li>
         </ul>
-
       </div>
-    </main>
+    </Fragment>
+
   )
 }
 
