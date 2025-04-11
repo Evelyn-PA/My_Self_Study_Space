@@ -16,7 +16,7 @@ Welcome to my self-study project! This repository contains various projects and 
 In this repository, I focus on improving my skills in various programming languages and technologies. The projects range from simple scripts to more complex applications, allowing me to explore different aspects of software development.
 
 ## Technologies Used
-- HTML, CSS, JavaScript
+- HTML, CSS, JavaScript, React.
 - Python
 
 ## Projects
