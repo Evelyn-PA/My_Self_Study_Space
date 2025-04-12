@@ -1,3 +1,10 @@
+/* Reset the style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #27292c;
@@ -13,30 +20,55 @@ body {
 
 main {
   flex: 1;
+  margin-left: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-items {
+  margin-left: 1.5rem;
+}
+
+.nav {
+  padding-right: 1.5rem;
+  display: flex;
+  font-size: 1.4rem;
+  list-style: none;
 }
 
 h1 {
-  text-align: left;
   margin-top: 40px;
-  font-size: 5rem;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-img {
+.logo {
   margin-right: auto;
   margin-top: 1rem;
   width: 5rem;
   padding: 10px;
 }
 
-
+ol {
+  width: fit-content;
+  margin: 0 auto;
+}
 
 .content {
   font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 footer {
-  background-color: whitesmoke;
-  color: black;
+  padding: 1.5rem;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
 }
