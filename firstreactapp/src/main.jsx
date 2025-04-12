@@ -39,38 +39,59 @@ import "./index.css";
 const root = createRoot(document.getElementById("root"))
 root.render(
   <>
-    <TemporaryName />
-    <Footer />
+    <Page />
   </>
 
 )
 
-//create component
-function TemporaryName() {
+//create header component  with nav
+function Header() {
   return (
-    <Fragment>
-      <div className="header">
-        <img src="\images\tips.png" alt="mylogo" />
-      </div>
+    <header className="header">
+      <img src="\images\tips.png" alt="mylogo" className="logo" />
+      <nav>
+        <ul className="nav">
+          <li className="list-items">Pricing</li>
+          <li className="list-items">About</li>
+          <li className="list-items">Contact</li>
+        </ul>
+      </nav>
+    </header>
+  )
+}
+//create component
+function MainContent() {
+  return (
+    <main>
       <div className="content">
         <h1>Fun Facts about me</h1>
-        <ul>
+        <ol>
           <li>I don't want to do the handwork.</li>
           <li>I want to become a software developer.</li>
           <li>I want to travel around the world.</li>
           <li>I want to live a peaceful life.</li>
-        </ul>
+        </ol>
       </div>
-    </Fragment>
-
+    </main>
   )
 }
 
-//create a custom "page" component
+//create a footer "page" component
 function Footer() {
   return (
     <footer>
       <p>© 2025 Evelyn Nguyen development. All rights reserved.</p>
     </footer>
+  )
+}
+
+//Component Page
+function Page() {
+  return (
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
   )
 }
