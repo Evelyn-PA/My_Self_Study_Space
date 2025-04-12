@@ -27,6 +27,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #252524;
+  box-shadow: 1px 1px #252524;
 }
 
 .list-items {
