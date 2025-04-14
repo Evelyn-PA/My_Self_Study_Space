@@ -8,8 +8,12 @@ Welcome to my self-study project! This repository contains various projects and 
 - Digital_Business_Card
 - First_portfolio
 - Passengers_Counter_App
+- Black_
 - Space_Explore
+- Chrome_extension
+- Emoji_fighter
 - Today_List : **https://to-do-list-theta-ten-66.vercel.app/**
+- Password_
 - HackerRank.py
 
 ## Project Overview
