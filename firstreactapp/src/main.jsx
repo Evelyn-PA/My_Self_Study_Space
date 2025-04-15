@@ -4,6 +4,7 @@ import Header from "./components/Header.jsx";
 import Main from "./components/MainContent.jsx";
 //import the Footer.jsx
 import Footer from "./components/Footer.jsx";
+
 import { createRoot } from "react-dom/client";
 import { Fragment } from "react";
 import "./index.css";
