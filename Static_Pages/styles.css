@@ -1,3 +1,43 @@
+/* Set default style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "Inter", sans-serif
+    font-family: "Inter", sans-serif;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FDFFFC;
+    padding: 0.5rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F7F7F8;
+}
+
+img {
+    width: 5rem;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+li {
+    text-align: left;
+    list-style-position: inside;
+}
+
+ul {
+    width: fit-content;
+    margin: 0 auto;
 }
