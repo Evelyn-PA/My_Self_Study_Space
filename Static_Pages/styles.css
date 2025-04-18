@@ -9,6 +9,11 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.body {
+    background-color: #F7F7F8;
+    width: 1000
+}
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -19,9 +24,6 @@ body {
     width: 100%;
 }
 
-body {
-    background-color: #F7F7F8;
-}
 
 img {
     width: 5rem;

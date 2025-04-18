@@ -1,6 +1,6 @@
 export default function Main() {
     return (
-        <main>
+        <main className="body">
             <h1>Fun facts about me</h1>
             <ul>
                 <li>Learn To Code Everyday</li>

@@ -6,8 +6,8 @@ export default function App() {
     //import component
     return (
         <>
-            <Navbar />
-            <Main />
+            <div className="navi"><Navbar /></div>
+            <div className="content"><Main /></div>
         </>
     )
 
