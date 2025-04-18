@@ -7,21 +7,23 @@
 
 body {
     font-family: "Inter", sans-serif;
-}
-
-.body {
     background-color: #F7F7F8;
-    width: 1000
 }
 
-.nav {
+main {
+    background-image: url("/Images/travel.png");
+    background-size: 12rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 10%;
+}
+
+.navi {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #FDFFFC;
-    padding: 0.5rem;
-    max-width: 100%;
-    width: 100%;
+    padding: 0.2rem;
 }
 
 
@@ -29,17 +31,29 @@ img {
     width: 5rem;
 }
 
-h1 {
+.content h1 {
+    font-size: 2.5rem;
     text-align: center;
     padding: 2rem;
+}
+
+
+.content {
+    margin-top: 5rem;
 }
 
 li {
     text-align: left;
     list-style-position: inside;
+    font-size: 1.5rem;
 }
 
 ul {
     width: fit-content;
     margin: 0 auto;
+}
+
+/* Add color for the bullet */
+li::marker {
+    color: red;
 }
