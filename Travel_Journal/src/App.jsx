@@ -1,5 +1,6 @@
 
 import Header from "./components/Header";
+import Entry from "./components/entry";
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
         <Header />
       </div>
       <div className="body">
-
+        <Entry />
       </div>
     </>
   );
