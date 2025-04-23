@@ -26,21 +26,41 @@ body {
 
 .header img {
   width: 1.8rem;
+  height: 1.8rem;
   margin-bottom: -0.2rem;
+}
+
+.photos img {
+  width: 14rem;
+  border-radius: 1rem;
+  box-shadow: 0.4rem 0.4rem 0.4rem rgba(80, 80, 80, 0.1);
 }
 
 .body {
   display: flex;
+  gap: 2rem;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 3rem 2rem;
 }
 
 .body p {
-  width: 40rem;
+  font-size: 1.08rem;
+  width: 30rem;
 }
 
 .content {
   padding: 2rem;
+}
+
+.content h1,
+.content h4,
+.content p {
+  margin-top: 1rem;
+}
+
+.content h4,
+.content p {
+  margin-top: 0.5rem;
 }
 
 .head {
