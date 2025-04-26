@@ -13,7 +13,8 @@ Welcome to my self-study project! This repository contains various projects and 
 - Chrome_extension
 - Emoji_fighter
 - Today_List : **https://to-do-list-theta-ten-66.vercel.app/**
-- Password_
+- Password
+- Travel_Journal
 - HackerRank.py
 
 ## Project Overview
