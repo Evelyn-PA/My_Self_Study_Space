@@ -27,5 +27,5 @@ In this repository, I focus on improving my skills in various programming langua
 ## Projects
 ### Project 1: Birthday_GIFt_Site
 - **Description**: build a site with some card include GIF.
-- **Features**: CSS flexbox.
+- **Features**: CSS flexbox, basic HTML
 - **Status**: Completed
