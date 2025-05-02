@@ -13,7 +13,8 @@ Welcome to my self-study project! This repository contains various projects and 
 - Chrome_extension
 - Emoji_fighter
 - Today_List : **https://to-do-list-theta-ten-66.vercel.app/**
-- Password_
+- Password
+- Travel_Journal
 - HackerRank.py
 
 ## Project Overview
@@ -26,5 +27,5 @@ In this repository, I focus on improving my skills in various programming langua
 ## Projects
 ### Project 1: Birthday_GIFt_Site
 - **Description**: build a site with some card include GIF.
-- **Features**: CSS flexbox.
+- **Features**: CSS flexbox, basic HTML
 - **Status**: Completed
