@@ -14,9 +14,7 @@ export default function Entry(props) {
 
                 <h1>{props.name}</h1>
                 <p style={{ fontWeight: "bold" }}>22 Apr, 2025 - 22 May, 2025</p>
-                <p>A crisp, stylish travel journal capturing days spent in Helsinki, where Nordic design meets old-world charm.
-                    From sauna sessions by the sea to strolls through snowy streets and modern cafés, this journal holds notes, sketches,
-                    and moments from Finland’s cool capital.</p>
+                <p>{props.content}</p>
             </div>
         </div>
     )
