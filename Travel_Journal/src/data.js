@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        img: "\Images\Finland - Helsinki.jpg",
+        img: "/Images/Finland - Helsinki.jpg",
         title: "Helsinki - Finland",
         name: "Helsinki",
         link: "https://shorturl.at/B1Baj",
