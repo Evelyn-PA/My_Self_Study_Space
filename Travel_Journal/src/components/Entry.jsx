@@ -14,6 +14,8 @@ export default function Entry(props) {
                 <h1>{props.name}</h1>
                 <p style={{ fontWeight: "bold" }}>22 Apr, 2025 - 22 May, 2025</p>
                 <p>{props.content}</p>
+
+                
             </div>
         </div>
     )
