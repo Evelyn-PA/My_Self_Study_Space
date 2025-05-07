@@ -1,7 +1,8 @@
 export default function head() {
     return (
-        <>
-            <h1><img src="./Images/chef_icon.png" alt="Chef Icon" />Chef Claude </h1>
-        </>
+        <div className="header">
+            <img src="./Images/chef_icon.png" alt="Chef Icon" />
+            <h1>Chef Claude </h1>
+        </div>
     )
 }
