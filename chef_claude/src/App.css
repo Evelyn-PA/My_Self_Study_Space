@@ -55,3 +55,7 @@
 .form button:hover {
   background-color: rgb(82, 80, 80);
 }
+
+li {
+  text-align: center;
+}
