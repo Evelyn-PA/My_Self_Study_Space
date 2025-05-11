@@ -15,6 +15,7 @@ Welcome to my self-study project! This repository contains various projects and 
 - Today_List : **https://to-do-list-theta-ten-66.vercel.app/**
 - Password
 - Travel_Journal
+- Chef Claude
 - HackerRank.py
 
 ## Project Overview
