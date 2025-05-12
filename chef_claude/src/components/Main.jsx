@@ -1,5 +1,5 @@
 export default function Main() {
-    const ingreadients = ["eggs", "milk", "flour", "sugar", "butter"];
+    const ingreadients = ["eggs", "milk", "flour", "sugar", "butter", "salt", "pepper", "chocolate", "vanilla", "baking powder"];
     const ingredientsList = ingreadients.map((ingredient) => {
         return (
             <li key={ingredient}>
