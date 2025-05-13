@@ -1,6 +1,7 @@
+import React from "react";
 export default function Main() {
-    const ingreadients = ["eggs", "milk", "flour", "sugar", "butter", "salt", "pepper", "chocolate", "vanilla", "baking powder"];
-    const ingredientsList = ingreadients.map((ingredient) => {
+    const [ingredients, setIngredient] = React.useState(["eggs", "milk", "flour", "sugar", "butter", "salt", "pepper"]);
+    const ingredientsList = ingredients.map((ingredient) => {
         return (
             <li key={ingredient}>
                 {ingredient}
@@ -12,8 +13,14 @@ export default function Main() {
         event.preventDefault();
         const formData = new FormData(event.currentTarget); //Web API FormData to get data from the form
         const newIngredient = formData.get("ingredient");
-        ingreadients.add(newIngredient); //Add the new ingredient to the list
-        console.log(ingreadients);
+        //Check if the ingredient is typed
+        if (newIngredient !== "") {
+
+            setIngredient(preIngredient => [...preIngredient, newIngredient]) //Add the new ingredient to the list
+        }
+        console.log(ingredients);
+
+        event.target.reset();
     }
 
     return (
