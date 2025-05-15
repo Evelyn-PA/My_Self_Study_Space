@@ -1,6 +1,6 @@
 import React from "react";
 export default function Main() {
-    const [ingredients, setIngredient] = React.useState(["eggs", "milk", "flour", "sugar", "butter", "salt", "pepper"]);
+    const [ingredients, setIngredient] = React.useState(["eggs", "milk", "flour", "sugar", "butter", "salt", "pepper"]); //Use state
     const ingredientsList = ingredients.map((ingredient) => {
         return (
             <li key={ingredient}>
@@ -18,7 +18,6 @@ export default function Main() {
 
             setIngredient(preIngredient => [...preIngredient, newIngredient]) //Add the new ingredient to the list
         }
-        console.log(ingredients);
 
         event.target.reset();
     }
