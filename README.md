@@ -8,7 +8,7 @@ Welcome to my self-study project! This repository contains various projects and 
 - Digital_Business_Card
 - First_portfolio
 - Passengers_Counter_App
-- Black_
+- Black_jack
 - Space_Explore
 - Chrome_extension
 - Emoji_fighter
