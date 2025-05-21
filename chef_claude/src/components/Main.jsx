@@ -16,8 +16,8 @@ export default function Main() {
         //Check if the ingredient is typed
         if (newIngredient !== "") {
 
-            setIngredient(preIngredient => [...
-                preIngredient, newIngredient]) //Add the new ingredient to the list
+            setIngredient(preIngredient => [... //Using spead
+                preIngredient, newIngredient]) //Add the new ingredient to the list with React State
         }
 
         event.target.reset();
