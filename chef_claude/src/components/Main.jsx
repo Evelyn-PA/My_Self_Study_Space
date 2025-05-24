@@ -9,23 +9,18 @@ export default function Main() {
         )
     })
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget); //Web API FormData to get data from the form
+
+    function submit(formData) {
         const newIngredient = formData.get("ingredient");
         //Check if the ingredient is typed
         if (newIngredient !== "") {
-
-            setIngredient(preIngredient => [... //Using spead
+            setIngredient(preIngredient => [... //Using spread
                 preIngredient, newIngredient]) //Add the new ingredient to the list with React State
         }
-
-        event.target.reset();
     }
-
-    return (
+        return (
         <>
-            <form className="form" onSubmit={handleSubmit}>
+            <form className="form" form action={submit}>
                 <input
                     type="text"
                     placeholder="Enter your ingredients"
