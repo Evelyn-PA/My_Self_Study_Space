@@ -30,9 +30,10 @@ export default function Main() {
                 <button type="submit">+ Add</button>
             </form>
 
-            <ul>
-                {ingredientsList}
-            </ul>
+            <section>
+                <h2>Ingredients on hand</h2>
+                <ul aria-live="polite">{ingredientsList}</ul>
+            </section>
         </>
     )
 }
