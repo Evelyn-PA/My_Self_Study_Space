@@ -57,12 +57,15 @@
 }
 
 ul {
-  font-size: 1rem;
-  margin-top: 2rem;
+  padding-left: 2rem;
+  margin-left: 0; /* or auto */
+  max-width: 800px;
 }
 
 li {
-  text-align: center;
+  text-align: left;
+  list-style: disc inside;
+  line-height: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
