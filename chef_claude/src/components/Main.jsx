@@ -30,10 +30,14 @@ export default function Main() {
                 <button type="submit">+ Add</button>
             </form>
 
-            {ingredients.length&& <section >
-                <h2>Ingredients on hand</h2>
-                <ul aria-live="polite">{ingredientsList}</ul>
-                    {ingredientsList.length > 3 && <div className="ready-for-recipe-box">
+            {ingredients.length > 0 && 
+            <section >
+                <div className="list-ingre">
+                    <h2>Ingredients on hand</h2>
+                    <ul aria-live="polite">{ingredientsList}</ul>
+                </div>
+                {ingredientsList.length > 3 && 
+                <div className="ready-for-recipe-box">
                     <div className="recipe-paragraph">
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>

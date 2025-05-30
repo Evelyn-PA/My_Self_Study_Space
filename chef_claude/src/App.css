@@ -56,24 +56,6 @@
   background-color: rgb(82, 80, 80);
 }
 
-ul {
-  padding-left: 2rem;
-  margin-left: 0; /* or auto */
-  max-width: 800px;
-}
-
-li {
-  text-align: left;
-  list-style: disc inside;
-  line-height: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-h2{
-  padding: 2rem;
-  text-align: center;
-}
-
 .ready-for-recipe-box {
   background-color: #f1f1f1;
   border-radius: 1rem;
@@ -102,4 +84,23 @@ h2{
 
 .get-recipe-btn:hover{
   background-color: #f77878;
+}
+
+.list-ingre{
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-ingre ul {
+  line-height: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-right: 10rem;
+  padding-left: 1.5rem;
+  width: 20rem;
 }
