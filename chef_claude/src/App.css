@@ -55,3 +55,24 @@
 .form button:hover {
   background-color: rgb(82, 80, 80);
 }
+
+ul {
+  font-size: 1.1rem;
+  padding-left: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: disc inside;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.list-ingre{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
