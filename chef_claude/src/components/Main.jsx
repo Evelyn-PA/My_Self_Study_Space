@@ -1,22 +1,15 @@
 import React from "react";
-import Recipe from "./claudeRecipe"
-import IngredientList from "./IngredientsList"
+import Recipe from "./components2/claudeRecipe"
+import IngredientList from "./components2/IngredientsList"
 export default function Main() {
-    const [ingredients, setIngredient] = React.useState(["egg", "meat", "water", "Veggie"]); //Use state
-    const ingredientsList = ingredients.map((ingredient) => 
-        (
-            <li key={ingredient}>
-                {ingredient}
-            </li>
-        )
+const [ingredients, setIngredients] = React.useState(
+        ["all the main spices", "pasta", "ground beef", "tomato paste"]
     )
-
-
     function submit(formData) {
         const newIngredient = formData.get("ingredient");
         //Check if the ingredient is typed
         if (newIngredient !== "") {
-            setIngredient(preIngredient => [... //Using spread
+            setIngredients(preIngredient => [... //Using spread
                 preIngredient, newIngredient]) //Add the new ingredient to the list with React State
         }
     }
@@ -30,6 +23,7 @@ export default function Main() {
     }
 
     console.log(showRecipe)
+
     return (
         <>
             <form className="form" action={submit}>
@@ -43,7 +37,7 @@ export default function Main() {
             </form>
 
             {ingredients.length > 0 &&
-                <IngredientList listOfIngredient ={ingredientsList} showRecipe ={showRecipe} recipeShow={recipeShow}/>}
+                <IngredientList listOfIngredient ={ingredients} showRecipe ={showRecipe} recipeShow={recipeShow}/>}
 
             {recipeShow && <Recipe/>}
         </>
