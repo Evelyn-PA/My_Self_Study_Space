@@ -1,34 +1,21 @@
-import { HfInference } from "@huggingface/inference";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const SYSTEM_PROMPT = `
-You are an assistant that receives a list of ingredients that a user has and suggests 
-a recipe they could make with some or all of those ingredients. 
-You don't need to use every ingredient they mention in your recipe. 
-The recipe can include additional ingredients they didn't mention, 
-but try not to include too many extra ingredients. Format your response in markdown 
-to make it easier to render to a web page
-`
-
-/**
- * An instance of InferenceClient initialized with the API key from the environment variable `EACT_APP_AI_API_KEY`.
- * `hf` is used to interact with an AI inference service, allowing the application to send requests and receive responses from the AI model.
- */
-const hf = new HfInference(import.meta.env.VITE_AI_API_KEY);
+const ai = new GoogleGenerativeAI(import.meta.env.VITE_AI_API_KEY);
+const model = ai.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 export async function getRecipeFromAI(ingredientsArr) {
-    const ingredientsString = ingredientsArr.join(", ")
-    try {
-        const response = await hf.chatCompletion({
-            model: "deepseek-ai/DeepSeek-R1-0528",
-            messages: [
-                { role: "system", content: SYSTEM_PROMPT },
-                { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
-            ],
-            max_tokens: 1024,
-        })
-        return response.choices[0].message.content
-    } catch (err) {
-        console.error(err.message)
-    }
-}
+  const ingredientsString = ingredientsArr.join(", ");
+  const prompt = `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`;
 
+  try {
+    const result = await model.generateContent({
+      contents: [{ parts: [{ text: prompt }] }]
+    });
+
+    const response = await result.response;
+    return response.text();
+  } catch (err) {
+    console.error("Gemini API error:", err);
+    return "Error generating recipe.";
+  }
+}
