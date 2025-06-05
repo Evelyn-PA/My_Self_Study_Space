@@ -6,14 +6,14 @@ export default function IngredientsList(props) {
         <section>
             <h2>Ingredients on hand</h2>
             <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
-            {props.listOfIngredient.length > 3 && 
-            <div className="get-recipe-container">
-                <div className="getRecipeBox">
-                    <h3>Ready for a recipe?</h3>
-                    <p>Generate a recipe from your list of ingredients.</p>
-                </div>
-                <button className="getRecipeBtn" onClick={props.showRecipe}>{props.recipeShow?"Hide":"Get"} a recipe</button>
-            </div>}
+            {props.listOfIngredient.length > 3 &&
+                <div className="get-recipe-container">
+                    <div className="getRecipeBox">
+                        <h3>Ready for a recipe?</h3>
+                        <p>Generate a recipe from your list of ingredients.</p>
+                    </div>
+                    <button className="getRecipeBtn" onClick={props.showRecipe}>Get a recipe</button>
+                </div>}
         </section>
     )
 }

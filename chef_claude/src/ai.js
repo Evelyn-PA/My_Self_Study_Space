@@ -1,4 +1,4 @@
-import {HfInference} from "@huggingface/HfInference" 
+import { HfInference } from "@huggingface/inference";
 
 const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients that a user has and suggests 
@@ -13,7 +13,7 @@ to make it easier to render to a web page
  * An instance of InferenceClient initialized with the API key from the environment variable `EACT_APP_AI_API_KEY`.
  * `hf` is used to interact with an AI inference service, allowing the application to send requests and receive responses from the AI model.
  */
-const hf = new InferenceClient(process.env.EACT_APP_AI_API_KEY);
+const hf = new HfInference(import.meta.env.VITE_AI_API_KEY);
 
 export async function getRecipeFromAI(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")

@@ -1,10 +1,9 @@
 import React from "react";
-import Recipe from "./components2/claudeRecipe"
+import Out from "./components2/claudeRecipe.jsx"
 import IngredientList from "./components2/IngredientsList"
-export default function Main() {
-const [ingredients, setIngredients] = React.useState(
-        ["all the main spices", "pasta", "ground beef", "tomato paste"]
-    )
+import { getRecipeFromAI } from "../ai.js"
+export default function main() {
+    const [ingredients, setIngredients] = React.useState([])
     function submit(formData) {
         const newIngredient = formData.get("ingredient");
         //Check if the ingredient is typed
@@ -15,11 +14,12 @@ const [ingredients, setIngredients] = React.useState(
     }
 
     //State represent the recipe
-    const [recipeShow, setRecipeShow] = React.useState(false);
+    const [recipe, setRecipe] = React.useState("");
 
     //click action show the recipe
-    function showRecipe(){
-        setRecipeShow(preShow => !preShow )
+    async function showRecipe() {
+        const recipeMarkDown = await getRecipeFromAI(ingredients)
+        setRecipe(recipeMarkDown)
     }
 
     console.log(showRecipe)
@@ -37,9 +37,9 @@ const [ingredients, setIngredients] = React.useState(
             </form>
 
             {ingredients.length > 0 &&
-                <IngredientList listOfIngredient ={ingredients} showRecipe ={showRecipe} recipeShow={recipeShow}/>}
+                <IngredientList listOfIngredient={ingredients} showRecipe={showRecipe} />}
 
-            {recipeShow && <Recipe/>}
+            {recipe && <Out recipe={recipe} />}
         </>
     )
 }
