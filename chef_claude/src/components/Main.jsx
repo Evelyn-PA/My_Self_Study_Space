@@ -14,13 +14,19 @@ export default function main() {
     }
 
     //State represent the recipe
-    const [recipe, setRecipe] = React.useState("");
+    const [recipe, setRecipe] = React.useState("")
+
+    //Check the recipe whether is show or not
+    const [hasShowRecipe, setHasShowRecipe] = React.useState(false)
 
     //click action show the recipe
     async function showRecipe() {
         const recipeMarkDown = await getRecipeFromAI(ingredients)
         setRecipe(recipeMarkDown)
+        setHasShowRecipe(true)
     }
+
+
 
     console.log(showRecipe)
 
@@ -37,7 +43,7 @@ export default function main() {
             </form>
 
             {ingredients.length > 0 &&
-                <IngredientList listOfIngredient={ingredients} showRecipe={showRecipe} />}
+                <IngredientList listOfIngredient={ingredients} showRecipe={showRecipe} checkShowRecipe={hasShowRecipe}/>}
 
             {recipe && <Out recipe={recipe} />}
         </>

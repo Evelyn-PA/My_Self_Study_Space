@@ -81,7 +81,7 @@ h2{
 }
 
 .get-recipe-container{
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: flex;
   background-color: rgba(231, 231, 231, 0.5);
   width: 55rem;
@@ -103,21 +103,50 @@ h2{
   background-color: rgb(224, 98, 98);
   border: none;
   width: 12rem;
-  padding:1rem 2rem;
+  padding:1rem 1rem;
   border-radius: 1rem;
   color: rgb(250, 250, 250);
   font-size: 1rem;
 }
 
-/* .ai-recommend{
+.ai-recommend{
   width: 80rem;
   margin: auto;
   padding: 2rem 3rem;
   font-size: 1rem;
 }
 
-.ai-recommend ul li, .ai-recommend ol li{
+.ai-recommend li{
   line-height: 1.6rem;
-  width: 80rem;
-  margin-right: 10rem;
-} */
+  margin: 1rem auto;
+}
+
+.ai-recommend ul, ol{
+  padding-left: 1.5rem;
+  margin-left: 0;
+  list-style-position: outside;
+  margin-bottom: 1rem;
+}
+
+.ai-recommend p{
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+#h2{
+  width: 40rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.ai-recommend h2{ 
+  width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.ai-recommend strong{
+  font-size: 1.2rem;
+}
