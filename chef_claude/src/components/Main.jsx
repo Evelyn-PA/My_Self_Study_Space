@@ -2,6 +2,7 @@ import React from "react";
 import Out from "./components2/claudeRecipe.jsx"
 import IngredientList from "./components2/IngredientsList"
 import { getRecipeFromAI } from "../ai.js"
+import { Behavior } from "@google/genai";
 export default function main() {
     const [ingredients, setIngredients] = React.useState([])
     function submit(formData) {
