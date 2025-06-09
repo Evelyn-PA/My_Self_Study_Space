@@ -1,4 +1,4 @@
-header{
+header {
     background-color: #163E58;
     padding: 1rem 2rem;
     gap: 2.5rem;
@@ -8,16 +8,87 @@ header{
     align-items: center;
 }
 
-header h1{
+header h1 {
     align-self: center;
     color: #F6B51D
 }
 
-header img{
+header img {
     width: 5rem;
 }
 
-.web-name{
+.web-name {
     align-self: center;
     color: #F6B51D;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: 17px;
+    align-self: center;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 70rem;
+    margin: 20px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.form input {
+    width: 30rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+
+.form button {
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    background: #163E58;
+    width: 20rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form input,
+.form button {
+    min-height: 2rem;
+}
+
+.meme {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme>img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
 }
