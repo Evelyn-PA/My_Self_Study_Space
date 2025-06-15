@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useEffect } from "react"
 
 export default function Content() {
 
@@ -7,6 +8,15 @@ export default function Content() {
         bottomText: "With my broken heart",
         imgURL: "https://i.imgflip.com/9wp95f.jpg "
     })
+
+    const [allMemes, setAllmemes] = useState([])
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllmemes(data.data.memes))
+    }, [])
+
 
     function handleChange(event) {
         const { value, name } = event.currentTarget
@@ -19,7 +29,7 @@ export default function Content() {
         <main>
             <div className="form">
 
-                <form className="form-input"> 
+                <form className="form-input">
                     <div className="form-box">
                         <label>
                             Top Text
@@ -28,7 +38,7 @@ export default function Content() {
                             placeholder="Me trying to fix my life"
                             name="topText"
                             onChange={handleChange}
-                            value ={meme.topText}
+                            value={meme.topText}
                         />
                     </div>
 
