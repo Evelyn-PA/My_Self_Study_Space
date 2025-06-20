@@ -17,6 +17,16 @@ export default function main() {
     //State represent the recipe
     const [recipe, setRecipe] = React.useState("")
 
+    //Use ref
+    const recipeSection = React.useRef(null)
+
+    //Use effect
+    React.useEffect(() =>{
+        if (recipe !== "" && recipeSection.current!==null){
+            recipeSection.current.scrollIntoView({behavior: "smooth"})
+        }
+    }, [recipe])
+
     //Check the recipe whether is show or not
     const [hasShowRecipe, setHasShowRecipe] = React.useState(false)
 
@@ -44,7 +54,12 @@ export default function main() {
             </form>
 
             {ingredients.length > 0 &&
-                <IngredientList listOfIngredient={ingredients} showRecipe={showRecipe} checkShowRecipe={hasShowRecipe}/>}
+                <IngredientList
+                ref = {recipeSection}
+                    listOfIngredient={ingredients}
+                    showRecipe={showRecipe}
+                    checkShowRecipe={hasShowRecipe}
+                />}
 
             {recipe && <Out recipe={recipe} />}
         </>
