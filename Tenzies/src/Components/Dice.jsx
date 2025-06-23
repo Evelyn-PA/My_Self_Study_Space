@@ -1,4 +1,4 @@
-export default function Die(props) {
+export default function Dice(props) {
     return (
         <button>{props.value}</button>
     );
