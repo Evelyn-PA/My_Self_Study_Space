@@ -12,13 +12,17 @@ export default function App() {
       })) 
   }
 
+  function getRoll(){
+    setDice(generateAllNewDice)
+  }
+
   const diceElement = dice.map(num => <Dice key = {num.id} value ={num.value}/>)
   return (
     <main>
       <div className="container">
         {diceElement}
       </div>
-      <button className="role-button"></button>
+      <button className="roll-button" onClick={getRoll}>Roll Dice</button>
     </main>
   );
 }
