@@ -1,5 +1,5 @@
 export default function Dice(props) {
     return (
-        <button>{props.value}</button>
+        <button className="dice-button">{props.value}</button>
     );
 }
