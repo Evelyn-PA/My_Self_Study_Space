@@ -15,7 +15,9 @@ export default function App() {
   }
 
   function getRoll() {
-    setDice(generateAllNewDice)
+    setDice(prevDice => prevDice.map(item => {
+      return item.isHeld ? item : {...item, value: Math.ceil(Math.random() * 6)};
+    }));
   }
 
   function hold(id){
@@ -39,4 +41,5 @@ export default function App() {
       <button className="roll-button" onClick={getRoll}>Roll Dice</button>
     </main>
   );
+
 }
