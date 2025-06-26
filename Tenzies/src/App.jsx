@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { nanoid } from "nanoid"
+import Confetti from 'react-confetti'
 import Dice from "./Components/Dice"
 export default function App() {
-  const [dice, setDice] = useState(generateAllNewDice())
+  const [dice, setDice] = useState(()=> generateAllNewDice())
 
   function generateAllNewDice() {
     return new Array(10)
@@ -14,32 +15,52 @@ export default function App() {
       }))
   }
 
+  const buttonRef = useRef(null)
+  console.log(buttonRef)
+
+  const gameWon = dice.every(item => item.isHeld)
+    && dice.every(item => item.value === dice[0].value)
+   
+  useEffect(()=> {
+    buttonRef.current.focus()
+  }, [gameWon])
   function getRoll() {
+    if (gameWon) {
+      setDice(generateAllNewDice())
+    }
+    else {
+      setDice(prevDice => prevDice.map(item => {
+        return item.isHeld ? item : { ...item, value: Math.ceil(Math.random() * 6) };
+      }));
+    }
+  }
+
+  function hold(id) {
     setDice(prevDice => prevDice.map(item => {
-      return item.isHeld ? item : {...item, value: Math.ceil(Math.random() * 6)};
-    }));
+      return item.id === id ? { ...item, isHeld: !item.isHeld } : item
+    }))
   }
 
-  function hold(id){
-    setDice(prevDice => prevDice.map(item=> {
-      return item.id === id ? {...item, isHeld: !item.isHeld}: item
-    } ))
-  }
-
-  const diceElement = dice.map(diceObj => <Dice 
-    key={diceObj.id} 
-    id ={diceObj.id}
-    value={diceObj.value} 
+  const diceElement = dice.map(diceObj => <Dice
+    key={diceObj.id}
+    id={diceObj.id}
+    value={diceObj.value}
     isHeld={diceObj.isHeld}
-    hold ={hold}
-    />)
+    hold={hold}
+  />)
+
   return (
     <main>
+      <h1>Tenzies Game</h1>
+      <p className="instructions">Roll until all dice are the same.<br />Click each dice to freeze it at its current value between rolls.</p>
       <div className="container">
         {diceElement}
       </div>
-      <button className="roll-button" onClick={getRoll}>Roll Dice</button>
+      {gameWon && <Confetti/>}
+      <button ref={buttonRef} className="roll-button" onClick={getRoll}>{gameWon ? "New Game" : "Roll Dice"}</button>
+
     </main>
+
   );
 
 }
