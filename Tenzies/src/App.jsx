@@ -16,16 +16,16 @@ export default function App() {
   }
 
   const buttonRef = useRef(null)
-  console.log(buttonRef)
 
   const gameWon = dice.every(item => item.isHeld)
     && dice.every(item => item.value === dice[0].value)
    
+  //Use useEffect to render the focus to button when the gameWon = true
   useEffect(()=> {
     buttonRef.current.focus()
   }, [gameWon])
   function getRoll() {
-    if (gameWon) {
+    if (gameWon) { 
       setDice(generateAllNewDice())
     }
     else {
