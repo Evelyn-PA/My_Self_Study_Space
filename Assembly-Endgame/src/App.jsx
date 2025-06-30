@@ -1,6 +1,8 @@
 import Header from "./Components/Header"
 import Tag from "./Components/Tags"
+import "./App.css"
 import { languages } from "./language"
+
 export default function App() {
   const LanguageData = languages.map((dt) => {
     return <Tag 
@@ -16,7 +18,7 @@ export default function App() {
         <Header />
       </div>
 
-      <div>
+      <div className="tags-container">
         {LanguageData}
       </div>
     </div>
