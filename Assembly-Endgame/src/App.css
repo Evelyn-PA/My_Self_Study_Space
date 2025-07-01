@@ -12,3 +12,23 @@
     font-weight: bold;
     border-radius: 4px;
 }
+
+.words{
+    display: flex;
+    color: #f9f4da;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+section.words > span{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #323232;
+    border-bottom: 1px solid white;
+}
