@@ -30,5 +30,5 @@ section.words > span{
     justify-content: center;
     align-items: center;
     background-color: #323232;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(231, 231, 231);
 }
