@@ -22,7 +22,6 @@ export default function Content() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         allMemes[randomNumber]
         const newMemeUrl = allMemes[randomNumber].url 
-        console.log(newMemeUrl)
         setMeme(prevMeme => ({
             ...prevMeme,
             imgURL: newMemeUrl

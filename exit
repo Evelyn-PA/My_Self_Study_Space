@@ -1,0 +1,262 @@
+[33mcommit 5bc4de1148e433b995ecc82da5a36248176e1e4e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Fri May 9 23:44:19 2025 +0300
+
+    Change style for the form and btn
+
+[33mcommit 6d98703be9cbdd8240b9bb00f820b0f39b40d366[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Thu May 8 12:57:54 2025 +0300
+
+    Done for the search bar
+
+[33mcommit 67399b060a0d6c549139ccf6b1baf415acf25ae8[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Thu May 8 00:28:50 2025 +0300
+
+    Create initial layout for the main
+
+[33mcommit fb08b91fe41a8d3044b145d4788a265910d57af3[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Wed May 7 13:42:29 2025 +0300
+
+    Create the header
+
+[33mcommit f9bf7df8a5d30ea0bd250c2028f4a0f5a8c4f9f0[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Mon May 5 23:58:09 2025 +0300
+
+    Create initial files and folder
+
+[33mcommit 710a4b0c8a759829768a6441343741a24e0991b0[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Mon May 5 20:21:44 2025 +0300
+
+    Create initial files and folder
+
+[33mcommit fff54f210410d3dfe5c03d731686866ca2547bc7[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Sat May 3 15:51:39 2025 +0300
+
+    Complete the travel journal project with React
+
+[33mcommit 5f7c7b29a7f620e9061946d60d4f9dbc3efe9d9e[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Sat May 3 14:25:36 2025 +0300
+
+    Clean the database and make it more dynamic
+
+[33mcommit 7c05dae5a3fb37a7d979a765499cf33511ad5521[m
+Merge: c1c1848 4f210c3
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Fri May 2 23:51:12 2025 +0300
+
+    Merge branch 'main' of https://github.com/Evelyn-PA/My_Self_Study_Space
+
+[33mcommit c1c1848d9a7efb438bd5145e5eba0b6d1ec59ec2[m
+Author: Anh Nguyen <phuonganhnguyen6165@gmail.com>
+Date:   Fri May 2 23:49:03 2025 +0300
+
+    Add data to the app
+
+[33mcommit 4f210c3d53946bd4e5b3f5ce5b4287b1bb16ead2[m
+Author: Evelyn6165 <121911186+Evelyn-PA@users.noreply.github.com>
+Date:   Thu May 1 23:08:16 2025 +0300
+
+    Update README.md
+
+[33mcommit 35c0e1d04ae864697831e972a99dd2808178e2c2[m
+Author: Evelyn6165 <121911186+Evelyn-PA@users.noreply.github.com>
+Date:   Sat Apr 26 23:32:15 2025 +0300
+
+    Update README.md
+
+[33mcommit dfb2728687a26c6fc3e7965c76f5f797181b6e4b[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Fri Apr 25 16:36:40 2025 +0300
+
+    Delete unnecessary file
+
+[33mcommit 586feb4d93dd930d368230171a769d424cd6c9c3[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Thu Apr 24 14:21:21 2025 +0300
+
+    Use props to make duplication with different content
+
+[33mcommit 8c53c826acf49327094f6c6f479f67a6cc1e3a1c[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Thu Apr 24 01:25:19 2025 +0300
+
+    allign center to the content
+
+[33mcommit f1912e7f83ccb13ba20e250635fab2dcdbf4726b[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Wed Apr 23 23:23:15 2025 +0300
+
+    Align center for the body
+
+[33mcommit b7f8f8d0297370ec2d9d45bfa238e0b9b7c236da[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Tue Apr 22 21:42:26 2025 +0300
+
+    Create initial Entry.jsx
+
+[33mcommit 34d485029132a2610ab5eb7bfc51de0f6032ee5a[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Tue Apr 22 15:18:38 2025 +0300
+
+    Add initial style for header
+
+[33mcommit 5e01d2b28d218bc0fb98fcf2fb9777e74874c139[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Mon Apr 21 12:20:05 2025 +0300
+
+    Make header for the site
+
+[33mcommit f5a6dd8439bca465cb814afacadf855919bd6c33[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Sun Apr 20 21:52:10 2025 +0300
+
+    Create initial React dependencies for the project
+
+[33mcommit 0532b49b5bfebc23c54102fb4aaf0c4537d0bbf4[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Sat Apr 19 19:37:14 2025 +0300
+
+    Create initial files & component folder
+
+[33mcommit 23f87e4781d5a8e8805f31cc48636228bb1e080d[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Sat Apr 19 19:36:30 2025 +0300
+
+    Create initial files & component folder
+
+[33mcommit dfd2e5235293c3b81fcae12931be37dff9c2b09c[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Fri Apr 18 13:52:36 2025 +0300
+
+    Complete the styling
+
+[33mcommit df703ec868ebb17db3f83333e2b526182a4c4cac[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Fri Apr 18 13:25:52 2025 +0300
+
+    Add styles and div to better view
+
+[33mcommit c78a068d5465506620cb0b761a9bfbc59246e0f1[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Thu Apr 17 15:17:16 2025 +0300
+
+    Add innitial style for the static webpage
+
+[33mcommit 8e1afe1abc1ec44a81e55361a513f29e2fb30952[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Thu Apr 17 14:36:37 2025 +0300
+
+    Add font to the static webpage
+
+[33mcommit efff8f03982e1163a537e25edd28d4c032f8410d[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Tue Apr 15 16:03:07 2025 +0300
+
+    Create static pages project
+
+[33mcommit 04930bd511cbbb88498d573f7c061fd00ba884c9[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Tue Apr 15 12:53:58 2025 +0300
+
+    Edit
+
+[33mcommit be80aaa1a22d92c775b387ee66d5f6ad51137b03[m
+Merge: 4554206 df641ad
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Mon Apr 14 22:37:09 2025 +0300
+
+    Merge branch 'main' of https://github.com/Evelyn-PA/My_Self_Study_Space
+
+[33mcommit 4554206760f0b1f804b1ad4ebdcb83d69f85ca23[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Mon Apr 14 22:36:48 2025 +0300
+
+    create component in new files & import to main
+
+[33mcommit df641ad68b0ca176a937d23e135f590131419795[m
+Author: Evelyn6165 <121911186+Evelyn-PA@users.noreply.github.com>
+Date:   Sun Apr 13 23:45:00 2025 +0300
+
+    Update README.md
+
+[33mcommit 09f6fe17163e4d67eec45befaebfeffa3d998b2c[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Sat Apr 12 23:51:36 2025 +0300
+
+    Change style and add background color for the page
+
+[33mcommit b44ed28329d78d880d81284fcd696f249441a1b1[m
+Merge: e943e9e cdd6b74
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Sat Apr 12 23:40:29 2025 +0300
+
+    Merge branch 'main' of https://github.com/Evelyn-PA/My_Self_Study_Space
+
+[33mcommit e943e9e272136c9da807fd1f58c0cea6085b442f[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Sat Apr 12 23:40:16 2025 +0300
+
+    Add child component and style the app
+
+[33mcommit cdd6b7429a60c8c69fe8daf020bf8983966847a9[m
+Author: Evelyn6165 <121911186+Evelyn-PA@users.noreply.github.com>
+Date:   Fri Apr 11 22:23:36 2025 +0300
+
+    Update README.md
+
+[33mcommit 3198b70b70128127ffab28a7a3e9691d179b8811[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Thu Apr 10 14:17:16 2025 +0300
+
+    Use Fragment in React
+
+[33mcommit 4ccff89dda57bc627c1b116a6a53b2946424cefd[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Wed Apr 9 18:24:32 2025 +0300
+
+    Do the simple static page with React
+
+[33mcommit e5af4e96b2059458ae8ea4e6336c892fe97bce71[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Wed Apr 9 16:19:29 2025 +0300
+
+    Create a new component
+
+[33mcommit 6ec53220e5363b6a1c24c54dac27667717be66c2[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Wed Apr 9 15:32:10 2025 +0300
+
+    innitial setup for header
+
+[33mcommit 2e0ee86d0133cba3638fdaef55ca3cab0c897a9c[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Wed Apr 9 00:05:46 2025 +0300
+
+    innitial setup for header
+
+[33mcommit 06e11f512e12fe80bdc89806b08585bc2c1a9c8c[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Tue Apr 8 00:04:23 2025 +0300
+
+    The different (easy to use of React) JS
+
+[33mcommit 1c2df835f289a10d97b8d32fbf01d5fb71e87e01[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Mon Apr 7 23:36:45 2025 +0300
+
+    Add style and do the excercise
+
+[33mcommit aa3ca99c50337ee1f72fdf353d8c973c4d09e17c[m
+Author: Evelyn6165 <phuonganhnguyen6165@gmail.com>
+Date:   Mon Apr 7 22:40:53 2025 +0300
+
+    Create element and render in JSX
+
+[33mcommit 4e694
