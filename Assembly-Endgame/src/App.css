@@ -7,13 +7,12 @@
 }
 
 .tags {
-
     padding: 5px 4px;
     font-weight: bold;
     border-radius: 4px;
 }
 
-.words{
+.words {
     display: flex;
     color: #f9f4da;
     justify-content: center;
@@ -22,7 +21,7 @@
     font-size: 1.5rem;
 }
 
-section.words > span{
+section.words>span {
     height: 40px;
     width: 40px;
     display: flex;
@@ -31,4 +30,29 @@ section.words > span{
     align-items: center;
     background-color: #323232;
     border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    max-width: 42rem;
+    margin: 3rem auto;
+}
+
+#keyb-btn {
+    background-color: #F4EB13;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: 550;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#keyb-btn:hover{
+    background-color: #10A95B;
 }
