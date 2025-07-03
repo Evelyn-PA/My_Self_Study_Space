@@ -8,11 +8,18 @@ import { useState } from "react"
 
 export default function App() {
 
-  const [words, setWords] = useState("React")
+  const [words, setWords] = useState("Javascript")
 
   const [userGuess, setUserGuess] = useState([])
 
-
+  function showWords() {
+    if (userGuess.includes(words)) {
+      return "correct"
+    }
+    else{
+      return "wrong"
+    }
+  }
   return (
 
     <div>
@@ -20,10 +27,13 @@ export default function App() {
 
       <Tags />
 
-      <Rows word={words} />
+      <Rows word={words}
+        userGuess={userGuess} />
 
       <Keyboard guess={userGuess}
         setGuess={setUserGuess}
+        word={words}
+        checkAnswer={showWords}
       />
 
 

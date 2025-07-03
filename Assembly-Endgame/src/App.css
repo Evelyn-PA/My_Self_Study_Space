@@ -42,7 +42,7 @@ section.words>span {
     margin: 3rem auto;
 }
 
-#keyb-btn {
+.keyb-btn {
     background-color: #F4EB13;
     width: 3rem;
     height: 3rem;
@@ -53,6 +53,6 @@ section.words>span {
     font-size: 1.2rem;
 }
 
-#keyb-btn:hover{
+.keyb-btn:hover{
     background-color: #b6b6b6;
 }
