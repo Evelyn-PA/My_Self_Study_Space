@@ -1,9 +1,17 @@
-export default function Keyboard() {
-    const alphabet = "abcdefghigklmnopqrstuvwxyz"
+export default function Keyboard(props) {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-    const alKey = alphabet.split("").map((word, index) => (
-        <button id ="keyb-btn"key={index}>{word.toUpperCase()}</button>
+    const alKey = alphabet.split("").map((letter, index) => (
+        <button id="keyb-btn"
+            key={index}
+            onClick={() => {
+                if (!props.guess.includes(letter)) {
+                    props.setGuess([...props.guess, letter])
+                }
+            }
+            }>{letter.toUpperCase()}</button>
     ))
+
     return (
         <section className="keyboard">
             {alKey}

@@ -10,20 +10,21 @@ export default function App() {
 
   const [words, setWords] = useState("React")
 
-
+  const [userGuess, setUserGuess] = useState([])
 
 
   return (
 
     <div>
       <Header />
- 
-        <Tags />
 
-
+      <Tags />
 
       <Rows word={words} />
-      <Keyboard />
+
+      <Keyboard guess={userGuess}
+        setGuess={setUserGuess}
+      />
 
 
     </div>
