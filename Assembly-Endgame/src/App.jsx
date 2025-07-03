@@ -1,6 +1,5 @@
 import Header from "./Components/Header"
 import Tags from "./Components/Tags"
-import Rows from "./Components/Rows"
 import Keyboard from "./Components/KeyBoard"
 import "./App.css"
 
@@ -12,14 +11,10 @@ export default function App() {
 
   const [userGuess, setUserGuess] = useState([])
 
-  function showWords() {
-    if (userGuess.includes(words)) {
-      return "correct"
-    }
-    else{
-      return "wrong"
-    }
-  }
+  const letterElement = words.split("").map((letter, index) => (
+    <span key={index}
+    >{userGuess.includes(letter.toLowerCase()) && letter.toUpperCase()}</span>
+  ))
   return (
 
     <div>
@@ -27,13 +22,14 @@ export default function App() {
 
       <Tags />
 
-      <Rows word={words}
-        userGuess={userGuess} />
+      <section className="words">
+        {letterElement}
+      </section>
+
 
       <Keyboard guess={userGuess}
         setGuess={setUserGuess}
         word={words}
-        checkAnswer={showWords}
       />
 
 
