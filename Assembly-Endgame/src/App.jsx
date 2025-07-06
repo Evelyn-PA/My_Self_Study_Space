@@ -15,6 +15,10 @@ export default function App() {
     <span key={index}
     >{userGuess.includes(letter.toLowerCase()) && letter.toUpperCase()}</span>
   ))
+
+  function checkWords(letter){
+    return words.toLowerCase().includes(letter)
+  }
   return (
 
     <div>
@@ -30,6 +34,7 @@ export default function App() {
       <Keyboard guess={userGuess}
         setGuess={setUserGuess}
         word={words}
+        checkLetter = {checkWords}
       />
 
 
