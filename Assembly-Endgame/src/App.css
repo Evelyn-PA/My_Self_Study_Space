@@ -1,3 +1,11 @@
+.game-status.win{
+    background-color: #10A95B;
+}
+
+.game-status.lose{
+    background-color: red;
+}
+
 .tags-container {
     display: flex;
     flex-wrap: wrap;
@@ -53,11 +61,11 @@ section.words>span {
     font-size: 1.2rem;
 }
 .keyb-btn.correct{
-    background-color: green;
+    background-color: #10A95B
 }
 
 .keyb-btn.wrong{
-    background-color: red;
+    background-color: #D02B2B;
 }
 .keyb-btn:hover{
     background-color: #b6b6b6;

@@ -1,6 +1,6 @@
 export default function Header(props) {
-
-    const statusGame = props.guessTime === 0 ? "You Lose" : "You win!"
+    const isLose = props.guessTime === 0
+    const statusGame = isLose === 0 ? "lose" : "win"
     return (
         <main>
             <header>
@@ -10,9 +10,9 @@ export default function Header(props) {
 
             <section className={`game-status ${statusGame}`}>
                 <h2>
-                    You win
+                    {isLose? "You Lose": "You win!"}
                 </h2>
-                <p>Well Done!</p>
+                <p>{isLose? "Try again next time!": "Well Done!"}</p>
             </section>
         </main>
     )
