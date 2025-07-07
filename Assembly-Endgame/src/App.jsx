@@ -19,10 +19,19 @@ export default function App() {
   function checkWords(letter){
     return words.toLowerCase().includes(letter)
   }
+
+  const [guessTime, setGuesstime] = useState(8)
+
+  function count(letter){
+    if(!checkWords(letter)){
+      setGuesstime(prev => prev - 1)
+    }
+  }
   return (
 
     <div>
-      <Header />
+      <Header 
+      guessTime = {guessTime}/>
 
       <Tags />
 
@@ -30,11 +39,14 @@ export default function App() {
         {letterElement}
       </section>
 
+      <h4 style={{ textAlign: "center", color: "white" }}>Guessing time remains: {guessTime}</h4>
+
 
       <Keyboard guess={userGuess}
         setGuess={setUserGuess}
         word={words}
         checkLetter = {checkWords}
+        count = {count}
       />
 
 

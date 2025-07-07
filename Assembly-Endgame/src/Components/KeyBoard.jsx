@@ -6,6 +6,9 @@ export default function Keyboard(props) {
         if (props.guess.includes(letter)) {
             className += props.checkLetter(letter) ? " correct" : " wrong";
         }
+
+        
+
         return (
             <button
                 className= {className}
@@ -13,6 +16,7 @@ export default function Keyboard(props) {
                 onClick={() => {
                     if (!props.guess.includes(letter)) {
                         props.setGuess([...props.guess, letter]);
+                        props.count(letter)
                     }
                 }}
             >
