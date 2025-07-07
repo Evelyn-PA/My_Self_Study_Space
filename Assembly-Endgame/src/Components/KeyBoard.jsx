@@ -7,11 +7,11 @@ export default function Keyboard(props) {
             className += props.checkLetter(letter) ? " correct" : " wrong";
         }
 
-        
+
 
         return (
             <button
-                className= {className}
+                className={className}
                 key={index}
                 onClick={() => {
                     if (!props.guess.includes(letter)) {
@@ -28,6 +28,12 @@ export default function Keyboard(props) {
     return (
         <section className="keyboard">
             {alKey}
+
+            {props.guessTime === 0 && (
+                <button onClick={props.startNewGame}>New Game</button>
+            )}
         </section>
+
+
     );
 }

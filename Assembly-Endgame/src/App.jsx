@@ -16,22 +16,29 @@ export default function App() {
     >{userGuess.includes(letter.toLowerCase()) && letter.toUpperCase()}</span>
   ))
 
-  function checkWords(letter){
+  function checkWords(letter) {
     return words.toLowerCase().includes(letter)
   }
 
   const [guessTime, setGuesstime] = useState(8)
 
-  function count(letter){
-    if(!checkWords(letter)){
+  function count(letter) {
+    if (!checkWords(letter)) {
       setGuesstime(prev => prev - 1)
     }
   }
+
+  function startNewGame() {
+    setUserGuess([])
+    setGuesstime(8)
+  }
+
+
   return (
 
     <div>
-      <Header 
-      guessTime = {guessTime}/>
+      <Header
+        guessTime={guessTime} />
 
       <Tags />
 
@@ -45,12 +52,13 @@ export default function App() {
       <Keyboard guess={userGuess}
         setGuess={setUserGuess}
         word={words}
-        checkLetter = {checkWords}
-        count = {count}
+        checkLetter={checkWords}
+        count={count}
+        guessTime={guessTime}
+        startNewGame={startNewGame}
       />
-
-
     </div>
+
 
   )
 }
