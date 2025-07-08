@@ -22,17 +22,31 @@ export default function App() {
 
   const [guessTime, setGuesstime] = useState(8)
 
-  function count(letter) {
-    if (!checkWords(letter)) {
-      setGuesstime(prev => prev - 1)
-    }
-  }
-
   function startNewGame() {
     setUserGuess([])
     setGuesstime(8)
   }
 
+
+  function count(letter) {
+    if (!checkWords(letter)) {
+      setGuesstime(prev => {
+        const newTime = prev - 1
+        if (newTime === 0) {
+          isGameOver
+        }
+        return newTime
+      })
+    }
+  }
+
+
+  const isWin = words
+    .toLowerCase()
+    .split("")
+    .every(letter => userGuess.includes(letter.toLowerCase()))
+  
+  const isGameOver = isWin || guessTime === 0 
 
   return (
 
@@ -56,6 +70,7 @@ export default function App() {
         count={count}
         guessTime={guessTime}
         startNewGame={startNewGame}
+        isGameOver = {isGameOver}
       />
     </div>
 

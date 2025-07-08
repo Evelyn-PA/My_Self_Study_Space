@@ -13,6 +13,7 @@ export default function Keyboard(props) {
             <button
                 className={className}
                 key={index}
+                disabled={props.isGameOver}
                 onClick={() => {
                     if (!props.guess.includes(letter)) {
                         props.setGuess([...props.guess, letter]);
@@ -29,7 +30,7 @@ export default function Keyboard(props) {
         <section className="keyboard">
             {alKey}
 
-            {props.guessTime === 0 && (
+            {props.isGameOver &&(
                 <button onClick={props.startNewGame}>New Game</button>
             )}
         </section>
