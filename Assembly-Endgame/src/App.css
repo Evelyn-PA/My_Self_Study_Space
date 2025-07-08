@@ -3,7 +3,7 @@
 }
 
 .game-status.lose{
-    background-color: red;
+    background-color: #D02B2B;
 }
 
 .tags-container {
@@ -69,4 +69,22 @@ section.words>span {
 }
 .keyb-btn:hover{
     background-color: #b6b6b6;
+}
+
+.keyboard-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.new-game-btn{
+    background-color: #298EC6;
+    border: none;
+    font-size: 1.5rem;
+    color: #F9F4D9;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 8rem;
+    height: 2rem;
+    align-items: center;
+    align-self: center;
 }

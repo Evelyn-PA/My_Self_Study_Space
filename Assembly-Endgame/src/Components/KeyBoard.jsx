@@ -27,13 +27,17 @@ export default function Keyboard(props) {
     });
 
     return (
-        <section className="keyboard">
+           <section className="keyboard-wrapper">
+        <div className="keyboard">
             {alKey}
+        </div>
 
-            {props.isGameOver &&(
-                <button onClick={props.startNewGame}>New Game</button>
-            )}
-        </section>
+        {props.isGameOver && (
+            <button className="new-game-btn" onClick={props.startNewGame}>
+                New Game
+            </button>
+        )}
+    </section>
 
 
     );

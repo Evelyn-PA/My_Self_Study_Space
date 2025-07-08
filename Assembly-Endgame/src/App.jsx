@@ -45,14 +45,16 @@ export default function App() {
     .toLowerCase()
     .split("")
     .every(letter => userGuess.includes(letter.toLowerCase()))
-  
-  const isGameOver = isWin || guessTime === 0 
+
+  const isGameOver = isWin || guessTime === 0
 
   return (
 
     <div>
       <Header
-        guessTime={guessTime} />
+        guessTime={guessTime}
+        isWin={isWin}
+        isGameOver={isGameOver} />
 
       <Tags />
 
@@ -70,7 +72,7 @@ export default function App() {
         count={count}
         guessTime={guessTime}
         startNewGame={startNewGame}
-        isGameOver = {isGameOver}
+        isGameOver={isGameOver}
       />
     </div>
 
