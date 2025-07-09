@@ -4,6 +4,8 @@ import Keyboard from "./Components/KeyBoard"
 import "./App.css"
 
 import { useState } from "react"
+import { useEffect } from "react"
+
 
 export default function App() {
 
@@ -20,20 +22,23 @@ export default function App() {
     return words.toLowerCase().includes(letter)
   }
 
+  const [wrongGuesses, setWrongGuesses] = useState(false)
   const [guessTime, setGuesstime] = useState(8)
 
   function startNewGame() {
     setUserGuess([])
     setGuesstime(8)
+    setWrongGuesses(false)
   }
 
 
   function count(letter) {
     if (!checkWords(letter)) {
+      setWrongGuesses(true)
       setGuesstime(prev => {
         const newTime = prev - 1
         if (newTime === 0) {
-          isGameOver
+          return newTime
         }
         return newTime
       })
@@ -56,7 +61,8 @@ export default function App() {
         isWin={isWin}
         isGameOver={isGameOver} />
 
-      <Tags />
+      <Tags
+        isWrong={wrongGuesses} />
 
       <section className="words">
         {letterElement}

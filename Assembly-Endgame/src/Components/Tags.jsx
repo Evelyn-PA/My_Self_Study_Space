@@ -1,7 +1,7 @@
 import { languages } from "../language"
 import { nanoid } from "nanoid"
 
-export default function Tags() {
+export default function Tags(props) {
     return (
         <div className="tags-container">
             {languages.map((dt) => (
@@ -10,6 +10,7 @@ export default function Tags() {
                     name={dt.name}
                     backgroundColor={dt.backgroundColor}
                     color={dt.color}
+                    isWrong={props.isWrong || false}
                 />
             ))}
         </div>
@@ -23,6 +24,6 @@ function Tag(props) {
     }
 
     return (
-            <p style={style} className="tags">{props.name}</p>
+        <p style={style} className="tags">{props.name}{props.isWrong && <span>X</span>}</p>
     )
 }
