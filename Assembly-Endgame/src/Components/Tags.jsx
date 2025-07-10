@@ -1,5 +1,6 @@
 import { languages } from "../language"
 import { nanoid } from "nanoid"
+import icon from "../assets/skull-solid.svg"
 
 export default function Tags(props) {
     return (
@@ -19,11 +20,11 @@ export default function Tags(props) {
 
 function Tag(props) {
     const style = {
-        backgroundColor: props.backgroundColor,
+        backgroundColor: props.isWrong ? "grey" : props.backgroundColor,
         color: props.color
     }
 
     return (
-        <p style={style} className="tags">{props.name}{props.isWrong && <span>X</span>}</p>
+        <p style={style} className="tags">{props.name}{props.isWrong && <img src ={icon}/>}</p>
     )
 }

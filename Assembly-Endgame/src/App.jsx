@@ -28,7 +28,7 @@ export default function App() {
   function startNewGame() {
     setUserGuess([])
     setGuesstime(8)
-    setWrongGuesses(false)
+    setWrongGuesses(new Array(8).fill(false));
   }
 
 
