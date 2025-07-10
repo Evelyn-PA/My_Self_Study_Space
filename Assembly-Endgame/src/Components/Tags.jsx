@@ -4,13 +4,13 @@ import { nanoid } from "nanoid"
 export default function Tags(props) {
     return (
         <div className="tags-container">
-            {languages.map((dt) => (
+            {languages.map((dt, index) => (
                 <Tag
                     key={nanoid()}
                     name={dt.name}
                     backgroundColor={dt.backgroundColor}
                     color={dt.color}
-                    isWrong={props.isWrong || false}
+                    isWrong={props.isWrong[index]}
                 />
             ))}
         </div>

@@ -79,12 +79,13 @@ section.words>span {
     background-color: #298EC6;
     border: none;
     font-size: 1.5rem;
+    font-weight: bold;
     color: #F9F4D9;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     border-radius: 5px;
-    width: 8rem;
-    height: 2rem;
+    width: 10rem;
+    height: 3rem;
     align-items: center;
     align-self: center;
 }

@@ -22,7 +22,7 @@ export default function App() {
     return words.toLowerCase().includes(letter)
   }
 
-  const [wrongGuesses, setWrongGuesses] = useState(false)
+  const [wrongGuesses, setWrongGuesses] = useState(new Array(8).fill(false));
   const [guessTime, setGuesstime] = useState(8)
 
   function startNewGame() {
@@ -34,7 +34,15 @@ export default function App() {
 
   function count(letter) {
     if (!checkWords(letter)) {
-      setWrongGuesses(true)
+      setWrongGuesses(prev => {
+        const nextWrong = [...prev]
+        const firstFalseIndex = nextWrong.indexOf(false);
+        if (firstFalseIndex !== -1) {
+          nextWrong[firstFalseIndex] = true;
+        }
+        return nextWrong;
+
+      })
       setGuesstime(prev => {
         const newTime = prev - 1
         if (newTime === 0) {
