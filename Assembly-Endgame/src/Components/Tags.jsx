@@ -20,11 +20,13 @@ export default function Tags(props) {
 
 function Tag(props) {
     const style = {
-        backgroundColor: props.isWrong ? "grey" : props.backgroundColor,
+        backgroundColor: props.backgroundColor,
         color: props.color
     }
 
     return (
-        <p style={style} className="tags">{props.name}{props.isWrong && <img src ={icon}/>}</p>
+        <p style={style} className={`tags ${props.isWrong ? "tag-wrong" : ""}`}>
+            <span>{props.name}</span>
+        </p>
     )
 }
