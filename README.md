@@ -29,3 +29,5 @@ In this repository, I focus on improving my skills in various programming langua
 - **Description**: build a site with some card include GIF.
 - **Features**: CSS flexbox, basic HTML
 - **Status**: Completed
+
+### Project 2: Digital_Business_Card
